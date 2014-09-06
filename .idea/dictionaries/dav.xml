@@ -2,9 +2,11 @@
   <dictionary name="dav">
     <words>
       <w>användarnamn</w>
+      <w>inloggad</w>
       <w>laborationskod</w>
       <w>logga</w>
       <w>lösenord</w>
+      <w>multipart</w>
       <w>skriv</w>
     </words>
   </dictionary>

@@ -18,10 +18,8 @@ class HomeView {
         </label>
         <input type='text' size='25'>
         <label for='Lösenord'> Lösenord </label>
-        <input type='password' size='25'>
+        <input type='Lösenord' size='25'>
         <input type='submit' value='Logga in'>
-
-
     </fieldset>
 
 </form>
