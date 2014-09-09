@@ -1,11 +1,11 @@
 <?php
 require_once("src/view/HTMLView.php");
-require_once("src/view/HomeView.php");
+require_once("src/view/LoginView.php");
 
 $htmlView = new HTMLView();
-$homeView = new HomeView();
-$homeContent = $homeView->showHome();
-$htmlView->echoHTML($homeContent);
+$loginView = new LoginView();
+$loginContent = $loginView->showLogin();
+$htmlView->echoHTML($loginContent);
 /**
  * Created by PhpStorm.
  * User: dav
