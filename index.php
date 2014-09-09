@@ -1,11 +1,19 @@
 <?php
 require_once("src/view/HTMLView.php");
-require_once("src/view/LoginView.php");
+require_once("src/controller/LoginController.php");
 
 $htmlView = new HTMLView();
-$loginView = new LoginView();
-$loginContent = $loginView->showLogin();
+$lc = new LoginController();
+
+$loginContent = $lc->renderLogIn();
 $htmlView->echoHTML($loginContent);
+
+// Check if User make post from client.
+if($lc->userSubmit()){
+    $lc->ValidateLogin();
+}
+
+
 /**
  * Created by PhpStorm.
  * User: dav

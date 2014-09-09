@@ -1,5 +1,19 @@
 <?php
 class LoginView {
+
+    public function GetUserName(){
+        // Ej implementerad ska retunera Textfält UserName
+        return($_POST["userName"]);
+    }
+
+    Public function GetPassword(){
+        // Ej implementerad ska retunera Textfält password
+    }
+    // Return true if submit.
+    public function userSubmit(){
+        return isset($_POST['submitButton']);
+    }
+
     public function showLogin (){
         $ret ="<h1>Laborationskod dg222cs</h1>
         <h2>
@@ -16,10 +30,10 @@ class LoginView {
         <label for='Användarnamn'>
         Användarnamn:
         </label>
-        <input type='text' size='25'>
+        <input type='text' size='25' name='userName'>
         <label for='Lösenord'> Lösenord </label>
-        <input type='Lösenord' size='25'>
-        <input type='submit' value='Logga in'>
+        <input type='password' size='25' name='password'>
+        <input type='submit' value='Logga in' name='submitButton'>
     </fieldset>
 
 </form>
