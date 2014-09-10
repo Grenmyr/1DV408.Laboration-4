@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8cb42101-6320-4a60-8d20-8950846880f0" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/view/AuthenticatedView.php" afterPath="$PROJECT_DIR$/src/view/AuthenticatedView.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/model/SessionModel.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/controller/LoginController.php" afterPath="$PROJECT_DIR$/src/controller/LoginController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/view/LoginView.php" afterPath="$PROJECT_DIR$/src/view/LoginView.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dictionaries/dav.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/dav.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="1DV408Laboration2.iws" />
@@ -32,7 +30,7 @@
       <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="0" selection-start="231" selection-end="231" vertical-scroll-proportion="-7.8461537" vertical-offset="0" max-vertical-offset="408">
+            <state line="3" column="0" selection-start="97" selection-end="97" vertical-scroll-proportion="-1.9615384" vertical-offset="0" max-vertical-offset="408">
               <folding />
             </state>
           </provider>
@@ -54,7 +52,7 @@
       <file leaf-file-name="LoginView.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/view/LoginView.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="17" selection-start="568" selection-end="568" vertical-scroll-proportion="-13.653846" vertical-offset="121" max-vertical-offset="918">
+            <state line="28" column="17" selection-start="568" selection-end="568" vertical-scroll-proportion="-18.307692" vertical-offset="0" max-vertical-offset="918">
               <folding>
                 <marker date="1410358992985" expanded="true" signature="390:414" placeholder="..." />
                 <marker date="1410358992985" expanded="true" signature="461:894" placeholder="..." />
@@ -80,7 +78,7 @@
       <file leaf-file-name="LoginController.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/controller/LoginController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="17" selection-start="1158" selection-end="1158" vertical-scroll-proportion="0.8250429" vertical-offset="97" max-vertical-offset="918">
+            <state line="18" column="42" selection-start="557" selection-end="557" vertical-scroll-proportion="0.12006861" vertical-offset="236" max-vertical-offset="1071">
               <folding />
             </state>
           </provider>
@@ -89,7 +87,16 @@
       <file leaf-file-name="UserModel.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/model/UserModel.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="35" selection-start="550" selection-end="565" vertical-scroll-proportion="-10.461538" vertical-offset="0" max-vertical-offset="527">
+            <state line="15" column="36" selection-start="560" selection-end="560" vertical-scroll-proportion="-9.807693" vertical-offset="0" max-vertical-offset="544">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SessionModel.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/model/SessionModel.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="13" column="0" selection-start="305" selection-end="305" vertical-scroll-proportion="-8.5" vertical-offset="0" max-vertical-offset="578">
               <folding />
             </state>
           </provider>
@@ -111,10 +118,11 @@
         <option value="$PROJECT_DIR$/src/view/Home.php" />
         <option value="$PROJECT_DIR$/src/view/HomeView.php" />
         <option value="$PROJECT_DIR$/src/view/HTMLView.php" />
-        <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/src/view/LoginView.php" />
-        <option value="$PROJECT_DIR$/src/model/UserModel.php" />
         <option value="$PROJECT_DIR$/src/view/AuthenticatedView.php" />
+        <option value="$PROJECT_DIR$/src/model/UserModel.php" />
+        <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/src/model/SessionModel.php" />
         <option value="$PROJECT_DIR$/src/controller/LoginController.php" />
       </list>
     </option>
@@ -335,7 +343,11 @@
       <created>1410357761784</created>
       <updated>1410357761784</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Har skapat en inloggad vy, som presenteras om användare skriver in korrekt username och password. Tror att jag ska bygga ut funktionalitet för logga ut samt börja jobba med session snart som jag ej börjat med.">
+      <created>1410362926300</created>
+      <updated>1410362926300</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -378,7 +390,8 @@
     <MESSAGE value="testar repo" />
     <MESSAGE value="Bygger klasser hög flumnivå" />
     <MESSAGE value="Börjat bygga in funktionalitet för en post, ska härnäst skicka data till min model och jämföra username och password." />
-    <option name="LAST_COMMIT_MESSAGE" value="Börjat bygga in funktionalitet för en post, ska härnäst skicka data till min model och jämföra username och password." />
+    <MESSAGE value="Har skapat en inloggad vy, som presenteras om användare skriver in korrekt username och password. Tror att jag ska bygga ut funktionalitet för logga ut samt börja jobba med session snart som jag ej börjat med." />
+    <option name="LAST_COMMIT_MESSAGE" value="Har skapat en inloggad vy, som presenteras om användare skriver in korrekt username och password. Tror att jag ska bygga ut funktionalitet för logga ut samt börja jobba med session snart som jag ej börjat med." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -506,13 +519,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/UserModel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="35" selection-start="550" selection-end="565" vertical-scroll-proportion="-10.461538" vertical-offset="0" max-vertical-offset="527">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/view/AuthenticatedView.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="41" selection-start="52" selection-end="73" vertical-scroll-proportion="-1.3076923" vertical-offset="0" max-vertical-offset="408">
@@ -522,9 +528,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/UserModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="36" selection-start="560" selection-end="560" vertical-scroll-proportion="-9.807693" vertical-offset="0" max-vertical-offset="544">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/view/LoginView.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="17" selection-start="568" selection-end="568" vertical-scroll-proportion="-13.653846" vertical-offset="121" max-vertical-offset="918">
+        <state line="28" column="17" selection-start="568" selection-end="568" vertical-scroll-proportion="-18.307692" vertical-offset="0" max-vertical-offset="918">
           <folding>
             <marker date="1410358992985" expanded="true" signature="390:414" placeholder="..." />
             <marker date="1410358992985" expanded="true" signature="461:894" placeholder="..." />
@@ -537,14 +550,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="0" selection-start="231" selection-end="231" vertical-scroll-proportion="-7.8461537" vertical-offset="0" max-vertical-offset="408">
+        <state line="3" column="0" selection-start="97" selection-end="97" vertical-scroll-proportion="-1.9615384" vertical-offset="0" max-vertical-offset="408">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/SessionModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="0" selection-start="305" selection-end="305" vertical-scroll-proportion="-8.5" vertical-offset="0" max-vertical-offset="578">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/controller/LoginController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="17" selection-start="1158" selection-end="1158" vertical-scroll-proportion="0.8250429" vertical-offset="97" max-vertical-offset="918">
+        <state line="18" column="42" selection-start="557" selection-end="557" vertical-scroll-proportion="0.12006861" vertical-offset="236" max-vertical-offset="1071">
           <folding />
         </state>
       </provider>
