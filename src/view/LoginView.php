@@ -1,8 +1,8 @@
 <?php
 class LoginView {
 
-    public function GetUserName(){
-        return($_POST["userName"]);
+    public function GetUsername(){
+        return($_POST["username"]);
     }
 
     Public function GetPassword(){
@@ -21,7 +21,7 @@ class LoginView {
     Ej Inloggad
 
 </h2>
-<form enctype=multipart/form-data method=post action=?login>
+<form enctype=multipart/form-data method=post>
 
     <fieldset>
         <legend>
@@ -30,7 +30,7 @@ class LoginView {
         <label for='Användarnamn'>
         Användarnamn:
         </label>
-        <input type='text' size='25' name='userName'>
+        <input type='text' size='25' name='username'>
         <label for='Lösenord'> Lösenord </label>
         <input type='password' size='25' name='password'>
         <input type='submit' value='Logga in' name='submitButton'>
