@@ -23,7 +23,9 @@ class LoginController {
     }
     public function renderLogIn(){
         if($this->userModel->IsAuthenticated()){
-
+            if($this->authenticatedView->userLoggedOut()){
+                $this->sessionModel->UnsetSession();
+            }
         }
         else{
             // Check if User make post from client.
@@ -38,9 +40,10 @@ class LoginController {
                 }
             }
         }
-        // bad solution at the moment, by using a get after Validatelogin i could remove this if Else statement below.
+        // bad solution at the moment, by using a get after Validate login i could remove this if Else statement below.
         // fel här efter ||
         if($this->userModel->IsAuthenticated() || $this->sessionModel->CheckValidSession()) {
+
            return $this->authenticatedView->showAuthenticatedView();
         }
         else{

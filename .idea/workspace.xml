@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8cb42101-6320-4a60-8d20-8950846880f0" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/model/SessionModel.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/view/AuthenticatedView.php" afterPath="$PROJECT_DIR$/src/view/AuthenticatedView.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/controller/LoginController.php" afterPath="$PROJECT_DIR$/src/controller/LoginController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/SessionModel.php" afterPath="$PROJECT_DIR$/src/model/SessionModel.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="1DV408Laboration2.iws" />
@@ -52,7 +53,7 @@
       <file leaf-file-name="LoginView.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/view/LoginView.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="17" selection-start="568" selection-end="568" vertical-scroll-proportion="-18.307692" vertical-offset="0" max-vertical-offset="918">
+            <state line="11" column="24" selection-start="234" selection-end="234" vertical-scroll-proportion="-7.1923075" vertical-offset="0" max-vertical-offset="918">
               <folding>
                 <marker date="1410358992985" expanded="true" signature="390:414" placeholder="..." />
                 <marker date="1410358992985" expanded="true" signature="461:894" placeholder="..." />
@@ -67,9 +68,9 @@
       <file leaf-file-name="AuthenticatedView.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/view/AuthenticatedView.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="41" selection-start="52" selection-end="73" vertical-scroll-proportion="-1.3076923" vertical-offset="0" max-vertical-offset="408">
+            <state line="6" column="20" selection-start="154" selection-end="154" vertical-scroll-proportion="-3.9230769" vertical-offset="0" max-vertical-offset="612">
               <folding>
-                <marker date="1410362074523" expanded="true" signature="136:181" placeholder="..." />
+                <marker date="1410381381502" expanded="true" signature="323:368" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -78,7 +79,7 @@
       <file leaf-file-name="LoginController.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/controller/LoginController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="42" selection-start="557" selection-end="557" vertical-scroll-proportion="0.12006861" vertical-offset="236" max-vertical-offset="1071">
+            <state line="26" column="52" selection-start="866" selection-end="866" vertical-scroll-proportion="0.54545456" vertical-offset="238" max-vertical-offset="1122">
               <folding />
             </state>
           </provider>
@@ -96,7 +97,7 @@
       <file leaf-file-name="SessionModel.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/model/SessionModel.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="0" selection-start="305" selection-end="305" vertical-scroll-proportion="-8.5" vertical-offset="0" max-vertical-offset="578">
+            <state line="25" column="41" selection-start="680" selection-end="680" vertical-scroll-proportion="-11.115385" vertical-offset="136" max-vertical-offset="833">
               <folding />
             </state>
           </provider>
@@ -119,9 +120,9 @@
         <option value="$PROJECT_DIR$/src/view/HomeView.php" />
         <option value="$PROJECT_DIR$/src/view/HTMLView.php" />
         <option value="$PROJECT_DIR$/src/view/LoginView.php" />
-        <option value="$PROJECT_DIR$/src/view/AuthenticatedView.php" />
         <option value="$PROJECT_DIR$/src/model/UserModel.php" />
         <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/src/view/AuthenticatedView.php" />
         <option value="$PROJECT_DIR$/src/model/SessionModel.php" />
         <option value="$PROJECT_DIR$/src/controller/LoginController.php" />
       </list>
@@ -347,7 +348,11 @@
       <created>1410362926300</created>
       <updated>1410362926300</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Tror jag har fixat session log in, har dock ej fixat log ut funktionalitet ännu.">
+      <created>1410374399372</created>
+      <updated>1410374399372</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -358,7 +363,7 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32913387" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32913387" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24304539" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -391,7 +396,8 @@
     <MESSAGE value="Bygger klasser hög flumnivå" />
     <MESSAGE value="Börjat bygga in funktionalitet för en post, ska härnäst skicka data till min model och jämföra username och password." />
     <MESSAGE value="Har skapat en inloggad vy, som presenteras om användare skriver in korrekt username och password. Tror att jag ska bygga ut funktionalitet för logga ut samt börja jobba med session snart som jag ej börjat med." />
-    <option name="LAST_COMMIT_MESSAGE" value="Har skapat en inloggad vy, som presenteras om användare skriver in korrekt username och password. Tror att jag ska bygga ut funktionalitet för logga ut samt börja jobba med session snart som jag ej börjat med." />
+    <MESSAGE value="Tror jag har fixat session log in, har dock ej fixat log ut funktionalitet ännu." />
+    <option name="LAST_COMMIT_MESSAGE" value="Tror jag har fixat session log in, har dock ej fixat log ut funktionalitet ännu." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -519,25 +525,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/AuthenticatedView.php">
+    <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="41" selection-start="52" selection-end="73" vertical-scroll-proportion="-1.3076923" vertical-offset="0" max-vertical-offset="408">
-          <folding>
-            <marker date="1410362074523" expanded="true" signature="136:181" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/UserModel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="36" selection-start="560" selection-end="560" vertical-scroll-proportion="-9.807693" vertical-offset="0" max-vertical-offset="544">
+        <state line="3" column="0" selection-start="97" selection-end="97" vertical-scroll-proportion="-1.9615384" vertical-offset="0" max-vertical-offset="408">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/view/LoginView.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="17" selection-start="568" selection-end="568" vertical-scroll-proportion="-18.307692" vertical-offset="0" max-vertical-offset="918">
+        <state line="11" column="24" selection-start="234" selection-end="234" vertical-scroll-proportion="-7.1923075" vertical-offset="0" max-vertical-offset="918">
           <folding>
             <marker date="1410358992985" expanded="true" signature="390:414" placeholder="..." />
             <marker date="1410358992985" expanded="true" signature="461:894" placeholder="..." />
@@ -548,23 +545,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
+    <entry file="file://$PROJECT_DIR$/src/view/AuthenticatedView.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="0" selection-start="97" selection-end="97" vertical-scroll-proportion="-1.9615384" vertical-offset="0" max-vertical-offset="408">
-          <folding />
+        <state line="6" column="20" selection-start="154" selection-end="154" vertical-scroll-proportion="-3.9230769" vertical-offset="0" max-vertical-offset="612">
+          <folding>
+            <marker date="1410381381502" expanded="true" signature="323:368" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/model/SessionModel.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="0" selection-start="305" selection-end="305" vertical-scroll-proportion="-8.5" vertical-offset="0" max-vertical-offset="578">
+        <state line="25" column="41" selection-start="680" selection-end="680" vertical-scroll-proportion="-11.115385" vertical-offset="136" max-vertical-offset="833">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/UserModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="36" selection-start="560" selection-end="560" vertical-scroll-proportion="-9.807693" vertical-offset="0" max-vertical-offset="544">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/controller/LoginController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="42" selection-start="557" selection-end="557" vertical-scroll-proportion="0.12006861" vertical-offset="236" max-vertical-offset="1071">
+        <state line="26" column="52" selection-start="866" selection-end="866" vertical-scroll-proportion="0.54545456" vertical-offset="238" max-vertical-offset="1122">
           <folding />
         </state>
       </provider>
