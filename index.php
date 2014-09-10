@@ -8,10 +8,7 @@ $lc = new LoginController();
 $loginContent = $lc->renderLogIn();
 $htmlView->echoHTML($loginContent);
 
-// Check if User make post from client.
-if($lc->userSubmit()){
-    $lc->ValidateLogin();
-}
+
 
 
 /**

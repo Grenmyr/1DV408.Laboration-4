@@ -13,14 +13,15 @@ class LoginController {
         $this->userModel = new UserModel(); // Ej implementerad än
     }
     public function renderLogIn(){
-        return $this->loginView->showLogin();
-    }
-    public function validateLogIn(){
-       $this->loginView->GetUserName();
+        // Check if User make post from client.
+        if($this->loginView->userSubmit()){
+            $userName =  $this->loginView->GetUserName();
+            $password =  $this->loginView->GetPassword();
 
-    }
-    public  function userSubmit(){
-       return $this->loginView->userSubmit();
+            $this->userModel->validateLogIn($userName, $password);
+        }
+
+        return $this->loginView->showLogin();
     }
 
 }

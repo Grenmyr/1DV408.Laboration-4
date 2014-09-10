@@ -2,16 +2,16 @@
 class LoginView {
 
     public function GetUserName(){
-        // Ej implementerad ska retunera Textfält UserName
         return($_POST["userName"]);
     }
 
     Public function GetPassword(){
-        // Ej implementerad ska retunera Textfält password
+        return($_POST["password"]);
     }
     // Return true if submit.
     public function userSubmit(){
         return isset($_POST['submitButton']);
+
     }
 
     public function showLogin (){
