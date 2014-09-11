@@ -15,8 +15,18 @@ class LoginView {
     }
 
     public function showLogin (){
+        $currDate = date("d");
+        $clock = date("Y [G:i:s]");
 
-         $time = date("l, d F, Y [G:i:s]");
+        // This dates return interger so i can replace them with my values in arrays below.
+        $monthInt = (int)date("m");
+        $WeekDayInt = (int)date("N");
+
+        $days = array('Måndag', 'Tisdag', 'Onsdag', 'Torsdag', 'Fredag', 'Lördag', 'Söndag');
+        $month = array ('Januari','Februari','Mars','April','Maj','Juni','Juli','Sommarlov','September','Oktober','November','Jullov');
+
+        $sweDay = $days[$WeekDayInt-1];
+        $sweMonth = $month[$monthInt-1];
 
         $ret ="<h1>Laborationskod dg222cs</h1>
         <h2>
@@ -40,7 +50,7 @@ class LoginView {
     </fieldset>
 </form>
 <div>
-    <p>$time</p>
+    <p>$sweDay $currDate $sweMonth $clock</p>
 </div>
         ";
         return $ret;
