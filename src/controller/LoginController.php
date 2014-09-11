@@ -1,6 +1,7 @@
 <?php
 require_once("./src/view/AuthenticatedView.php");
 require_once("./src/view/LoginView.php");
+require_once("./src/view/SweDateView.php");
 require_once("./src/model/SessionModel.php");
 require_once("./src/model/UserModel.php");
 
@@ -10,15 +11,20 @@ class LoginController {
      * @var LoginView
      */
     private $loginView;
+    private $sweDateView;
     /**
      * @var UserModel
      */
     private $userModel;
 
+
+
     public  function __construct(){
         $this->authenticatedView = new AuthenticatedView();
         $this->loginView = new LoginView();
         $this->userModel = new UserModel();
+        $this->sweDateView = new SweDateView();
+
     }
     public function renderLogIn(){
         // If authenticated user, check if user pressed Logout. Then logout.
@@ -31,17 +37,20 @@ class LoginController {
             // Else if logged out, check if user logged in. Then log in.
             if($this->loginView->userSubmit()){
                 // Retrieve username and password string from LoginView from user post..
-                $password =  $this->loginView->GetPassword();
-                $username =  $this->loginView->GetUsername();
-                $this->userModel->LogIn($username, $password);
+                $password = $this->loginView->GetPassword();
+                $username = $this->loginView->GetUsername();
+                if (!$this->userModel->LogIn($username, $password)) {
+                    $this->loginView->setLoginFailed($username,$password);
+                }
+
             }
         }
        // After checking For user input previously, then either show log in view or log out view.
         if($this->userModel->IsAuthenticated() ) {
-           return $this->authenticatedView->showAuthenticatedView();
+           return $this->authenticatedView->showAuthenticatedView() .  $this->sweDateView->showDateView();
         }
         else{
-            return $this->loginView->showLogin();
+            return $this->loginView->showLogin()  .  $this->sweDateView->showDateView();
         }
     }
 }

@@ -24,7 +24,7 @@ class SessionModel {
     public function UnsetSession(){
         //$_SESSION["validSession"]=false;
         unset($_SESSION['validSession']);
-        header("Location: {$_SERVER['PHP_SELF']}");
+        //header("Location: {$_SERVER['PHP_SELF']}");
 
     }
    // Not implemented in application

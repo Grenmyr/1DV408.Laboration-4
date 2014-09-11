@@ -1,13 +1,33 @@
 <?php
 class LoginView {
+    private $message;
+
 
     public function GetUsername(){
+        if(isset($_POST["username"])){
         return($_POST["username"]);
+        }
     }
 
     Public function GetPassword(){
+        if(isset($_POST["password"])){
         return($_POST["password"]);
+        }
     }
+
+    public function setLoginFailed($username,$password) {
+        if($username===""){
+        $this->message = 'Användarnamn saknas: ';
+        }
+        else if($password === ""){
+            $this->message .= "Lösenord saknas";
+        }
+        else{
+            $this->message .= "Felaktigt användarnamn och/eller lösenord.";
+        }
+    }
+
+
     // Return true if submit.
     public function userSubmit(){
         return isset($_POST['submitButton']);
@@ -15,19 +35,8 @@ class LoginView {
     }
 
     public function showLogin (){
-        $currDate = date("d");
-        $clock = date("Y [G:i:s]");
-
-        // This dates return interger so i can replace them with my values in arrays below.
-        $monthInt = (int)date("m");
-        $WeekDayInt = (int)date("N");
-
-        $days = array('Måndag', 'Tisdag', 'Onsdag', 'Torsdag', 'Fredag', 'Lördag', 'Söndag');
-        $month = array ('Januari','Februari','Mars','April','Maj','Juni','Juli','Sommarlov','September','Oktober','November','Jullov');
-
-        $sweDay = $days[$WeekDayInt-1];
-        $sweMonth = $month[$monthInt-1];
-
+        $username = $this->GetUsername();
+        $password = $this->GetPassword();
         $ret ="<h1>Laborationskod dg222cs</h1>
         <h2>
 
@@ -40,18 +49,17 @@ class LoginView {
         <legend>
             Login - Skriv in användarnamn och lösenord
         </legend>
+        <p>$this->message<p>
         <label for='Användarnamn'>
         Användarnamn:
         </label>
-        <input type='text' size='25' name='username'>
+        <input type='text' size='25' name='username' value='$username'>
         <label for='Lösenord'> Lösenord </label>
-        <input type='password' size='25' name='password'>
+        <input type='password' size='25' name='password' value='$password'>
         <input type='submit' value='Logga in' name='submitButton'>
     </fieldset>
 </form>
-<div>
-    <p>$sweDay $currDate $sweMonth $clock</p>
-</div>
+
         ";
         return $ret;
     }
