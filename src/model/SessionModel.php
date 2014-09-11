@@ -10,8 +10,9 @@ class SessionModel {
      */
     public  function CheckValidSession(){
         if(isset($_SESSION["validSession"])){
-       return $_SESSION["validSession"];
-    }
+            return $_SESSION["validSession"];
+        }
+        return false;
     }
 
     // used to set session.

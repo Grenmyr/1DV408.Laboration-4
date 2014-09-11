@@ -3,12 +3,15 @@ class AuthenticatedView {
 
     // Return true if submit.
     public function userLoggedOut(){
-    if ($_GET['a'] === "logout"){
-        return true;
-    }
-        else{
-            return false;
-        }
+        if(isset($_GET['a'])){
+        return $_GET['a'] === "logout";}
+        return false;
+//    if ($_GET['a'] === "logout"){
+//        return true;
+//    }
+//        else{
+//            return false;
+//        }
     }
 
 

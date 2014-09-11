@@ -18,13 +18,12 @@ class LoginController {
         $this->userModel = new UserModel();
         //Ask someone if it does't work???
         //if(!isset($_SESSION['validSession'])){
-        $this->sessionModel = new SessionModel();
     //}
     }
     public function renderLogIn(){
         if($this->userModel->IsAuthenticated()){
             if($this->authenticatedView->userLoggedOut()){
-                $this->sessionModel->UnsetSession();
+                $this->userModel->LogOut();
             }
         }
         else{
@@ -33,16 +32,12 @@ class LoginController {
                 // Retrieve username and password string from user.
                 $password =  $this->loginView->GetPassword();
                 $username =  $this->loginView->GetUsername();
-                $this->userModel->validateLogIn($username, $password);
-                //fel här?
-                if($this->userModel->validateLogIn($username, $password)){
-                    $this->sessionModel->SetValidSession();
-                }
+                $this->userModel->LogIn($username, $password);
             }
         }
         // bad solution at the moment, by using a get after Validate login i could remove this if Else statement below.
         // fel här efter ||
-        if($this->userModel->IsAuthenticated() || $this->sessionModel->CheckValidSession()) {
+        if($this->userModel->IsAuthenticated() ) {
 
            return $this->authenticatedView->showAuthenticatedView();
         }
