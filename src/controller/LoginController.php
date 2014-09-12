@@ -5,47 +5,45 @@ require_once("./src/model/SessionModel.php");
 require_once("./src/model/UserModel.php");
 
 class LoginController {
+    private $authenticatedView;
     /**
      * @var LoginView
      */
-    private $authenticatedView;
     private $loginView;
+    /**
+     * @var UserModel
+     */
     private $userModel;
 
     public  function __construct(){
         $this->authenticatedView = new AuthenticatedView();
         $this->loginView = new LoginView();
         $this->userModel = new UserModel();
-        //Ask someone if it does't work???
-        //if(!isset($_SESSION['validSession'])){
-    //}
     }
     public function renderLogIn(){
+        // If authenticated user, check if user pressed Logout. Then logout.
         if($this->userModel->IsAuthenticated()){
             if($this->authenticatedView->userLoggedOut()){
                 $this->userModel->LogOut();
             }
         }
         else{
-            // Check if User make post from client.
+            // Else if logged out, check if user logged in. Then log in.
             if($this->loginView->userSubmit()){
-                // Retrieve username and password string from user.
+                // Retrieve username and password string from LoginView from user post..
                 $password =  $this->loginView->GetPassword();
                 $username =  $this->loginView->GetUsername();
                 $this->userModel->LogIn($username, $password);
             }
         }
-        // bad solution at the moment, by using a get after Validate login i could remove this if Else statement below.
-        // fel här efter ||
+       // After checking For user input previously, then either show log in view or log out view.
         if($this->userModel->IsAuthenticated() ) {
-
            return $this->authenticatedView->showAuthenticatedView();
         }
         else{
             return $this->loginView->showLogin();
         }
     }
-
 }
 
 /**

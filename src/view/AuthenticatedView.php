@@ -1,17 +1,10 @@
 <?php
 class AuthenticatedView {
-
+    private $logOut = "logout";
     // Return true if submit.
     public function userLoggedOut(){
-        if(isset($_GET['a'])){
-        return $_GET['a'] === "logout";}
-        return false;
-//    if ($_GET['a'] === "logout"){
-//        return true;
-//    }
-//        else{
-//            return false;
-//        }
+        return isset($_GET[$this->logOut]);
+
     }
 
 
@@ -21,7 +14,7 @@ class AuthenticatedView {
             Admin är inloggad.
         </h2>
         <P>Inloggning lyckades</P>
-        <a href='?a=logout'>Logga ut</a>
+        <a href='?$this->logOut'>Logga ut</a>
         ";
         return $ret;
     }

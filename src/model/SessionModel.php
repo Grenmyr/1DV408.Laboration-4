@@ -23,8 +23,8 @@ class SessionModel {
     // not used right now, to be implemented in logout and timed.
     public function UnsetSession(){
         //$_SESSION["validSession"]=false;
-        var_dump("tog bort");
         unset($_SESSION['validSession']);
+        header("Location: {$_SERVER['PHP_SELF']}");
 
     }
    // Not implemented in application
