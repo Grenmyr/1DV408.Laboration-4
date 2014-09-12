@@ -15,6 +15,9 @@ class LoginView {
     }
 
     public function showLogin (){
+
+         $time = date("l, d F, Y [G:i:s]");
+
         $ret ="<h1>Laborationskod dg222cs</h1>
         <h2>
 
@@ -35,8 +38,10 @@ class LoginView {
         <input type='password' size='25' name='password'>
         <input type='submit' value='Logga in' name='submitButton'>
     </fieldset>
-
 </form>
+<div>
+    <p>$time</p>
+</div>
         ";
         return $ret;
     }
