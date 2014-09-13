@@ -1,19 +1,21 @@
 <?php
 class AuthenticatedView {
     private $logOut = "logout";
+    private $message = "";
     // Return true if submit.
     public function userLoggedOut(){
         return isset($_GET[$this->logOut]);
-
     }
-
+    public  function successMSG(){
+        $this->message = "Inloggning lyckades.";
+    }
 
     public function showAuthenticatedView (){
         $ret ="<h1>Laborationskod dg222cs</h1>
         <h2>
             Admin är inloggad.
         </h2>
-        <P>Inloggning lyckades</P>
+        <P>$this->message</P>
         <a href='?$this->logOut'>Logga ut</a>
         ";
         return $ret;

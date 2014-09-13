@@ -5,7 +5,7 @@ require_once("src/controller/LoginController.php");
 $htmlView = new HTMLView();
 $lc = new LoginController();
 
-$loginContent = $lc->renderLogIn();
+$loginContent = $lc->render();
 $htmlView->echoHTML($loginContent);
 
 

@@ -11,7 +11,9 @@ class HTMLView {
             <meta charset='UTF-8' />
         </head>
         <body>
+        <div class='content'>
         $body
+        </div>
         </body>
         </html>";
     }

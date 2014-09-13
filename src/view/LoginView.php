@@ -2,7 +2,6 @@
 class LoginView {
     private $message;
 
-
     public function GetUsername(){
         if(isset($_POST["username"])){
         return($_POST["username"]);
@@ -14,8 +13,11 @@ class LoginView {
         return($_POST["password"]);
         }
     }
+    public  function successMSG(){
+        $this->message = "Du har nu loggat ut.";
+    }
 
-    public function setLoginFailed($username,$password) {
+    public function errorMSG($username,$password) {
         if($username===""){
         $this->message = 'Användarnamn saknas: ';
         }
@@ -31,17 +33,14 @@ class LoginView {
     // Return true if submit.
     public function userSubmit(){
         return isset($_POST['submitButton']);
-
     }
 
-    public function showLogin (){
+    public function show (){
         $username = $this->GetUsername();
         $password = $this->GetPassword();
         $ret ="<h1>Laborationskod dg222cs</h1>
         <h2>
-
     Ej Inloggad
-
 </h2>
 <form enctype=multipart/form-data method=post>
 
@@ -50,12 +49,13 @@ class LoginView {
             Login - Skriv in användarnamn och lösenord
         </legend>
         <p>$this->message<p>
-        <label for='Användarnamn'>
+        <label>
         Användarnamn:
         </label>
         <input type='text' size='25' name='username' value='$username'>
-        <label for='Lösenord'> Lösenord </label>
+        <label> Lösenord </label>
         <input type='password' size='25' name='password' value='$password'>
+        <input type='checkbox' name='LoginView::Checked' id='AutologinID' />
         <input type='submit' value='Logga in' name='submitButton'>
     </fieldset>
 </form>
