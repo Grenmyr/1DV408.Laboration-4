@@ -25,7 +25,7 @@ class LoginView {
     Public function saveCookie() {
         // TODO: I need to Save Client Data here, on client as file, also post a copy to server..
         if(isset($_POST["LoginView::Checked"])){
-            $this->cookieHelper->save("Teststring");
+            $this->cookieHelper->save($this->GetUsername(),$this->GetPassword());
             return true;
         }
         return false;

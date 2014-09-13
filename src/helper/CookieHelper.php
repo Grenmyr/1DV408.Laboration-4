@@ -2,9 +2,15 @@
 class CookieHelper {
     private static $cookieName = "CookieStorage";
     public function save($string) {
+        //var_dump($string);
         setcookie( self::$cookieName, $string, -1);
-        var_dump($_COOKIE);
-        var_dump($_SESSION);
+        //var_dump($_COOKIE);
+
+        foreach (self::$cookieName as $key => $value) {
+            var_dump("Key: $key; Value: $value<br />\n");
+        }
+        //var_dump(self::$cookieName[]);
+        //var_dump($_SESSION);
     }
     public function load() {
 //$ret = isset($_COOKIE["CookieStorage"]) ? $_COOKIE["CookieStorage"] : "";
