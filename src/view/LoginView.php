@@ -1,7 +1,15 @@
 <?php
+require_once("./src/helper/CookieHelper.php");
 class LoginView {
     private $message;
+    /**
+     * @var CookieHelper
+     */
+    private $cookieHelper;
 
+    public  function __construct(){
+        $this->cookieHelper = new CookieHelper();
+    }
     public function GetUsername(){
         if(isset($_POST["username"])){
         return($_POST["username"]);
@@ -13,11 +21,21 @@ class LoginView {
         return($_POST["password"]);
         }
     }
+
+    Public function saveCookie() {
+        // TODO: I need to Save Client Data here, on client as file, also post a copy to server..
+        if(isset($_POST["LoginView::Checked"])){
+            $this->cookieHelper->save("Teststring");
+            return true;
+        }
+        return false;
+    }
+
     public  function successMSG(){
         $this->message = "Du har nu loggat ut.";
     }
 
-    public function errorMSG($username,$password) {
+    public function FailedMSG($username,$password) {
         if($username===""){
         $this->message = 'Användarnamn saknas: ';
         }

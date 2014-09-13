@@ -6,7 +6,7 @@ class SweDateView
      * @return string
      * function to generate date view in swedish format to user.
      */
-    public function showDateView()
+    public function show()
     {
         $currDate = date("d");
         $clock = date("Y [G:i:s]");

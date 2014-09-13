@@ -10,7 +10,7 @@ class AuthenticatedView {
         $this->message = "Inloggning lyckades.";
     }
 
-    public function showAuthenticatedView (){
+    public function show (){
         $ret ="<h1>Laborationskod dg222cs</h1>
         <h2>
             Admin är inloggad.

@@ -5,7 +5,7 @@ require_once("./src/view/SweDateView.php");
 
 require_once("./src/model/UserModel.php");
 
-require_once("./src/helpers/Cookie.php");
+
 
 class LoginController {
     private $authenticatedView;
@@ -23,10 +23,8 @@ class LoginController {
      */
     private $userModel;
 
-    /**
-     * @var Cookie
-     */
-    private $cookie;
+
+
 
 
 
@@ -36,11 +34,9 @@ class LoginController {
         $this->sweDateView = new SweDateView();
 
         $this->userModel = new UserModel();
-
-        $this->cookie = new Cookie();
     }
     public function render(){
-        // If authenticated user, check if user pressed Logout. Then logout and present log out message..
+        // If authenticated user, check if user pressed Logout. Then logout and present log out message.
         if($this->userModel->IsAuthenticated()){
             if($this->authenticatedView->userLoggedOut()){
                 $this->userModel->LogOut();
@@ -48,7 +44,7 @@ class LoginController {
             }
         }
         else{
-            // Else if logged out, check if user logged in. Then log in.
+            // Else if logged out, check if user submit login. Then log in.
             if($this->loginView->userSubmit()){
                 // Retrieve username and password string from LoginView from user post..
                 $password = $this->loginView->GetPassword();
@@ -57,21 +53,24 @@ class LoginController {
                 //check if successful log in.
                 if ($this->userModel->LogIn($username, $password)) {
                     $this->authenticatedView->successMSG();
-                }
+
+                    $this->loginView->saveCookie();
+                    }
                 else{
                     //Present error msg if failed login.
-                    $this->loginView->errorMSG($username,$password);
+                    $this->loginView->FailedMSG($username,$password);
                 }
             }
         }
-       // After checking For user input previously, then either show log in view or log out view.
+
+       // After checking For user input previously, then either show login view or logout view.
         if($this->userModel->IsAuthenticated() ) {
             // TODO: Måste generera head för de båda vyerna.
-           return $this->authenticatedView->showAuthenticatedView()
-                  . $this->sweDateView->showDateView();
+           return $this->authenticatedView->show()
+                  . $this->sweDateView->show();
         }
         else{
-            return $this->loginView->show()  . $this->sweDateView->showDateView();
+            return $this->loginView->show()  . $this->sweDateView->show();
         }
     }
 }
