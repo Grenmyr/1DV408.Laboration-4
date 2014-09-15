@@ -9,6 +9,12 @@ class AuthenticatedView {
     public  function successMSG(){
         $this->message = "Inloggning lyckades.";
     }
+    public function cookieSuccessMSG() {
+        $this->message = "Inloggningen lyckades och vi kommer ihåg dig nästa gång.";
+    }
+    public function cookieLoginMSG(){
+        $this->message = "Inloggning lyckades via cookies.";
+    }
 
     public function show (){
         $ret ="<h1>Laborationskod dg222cs</h1>

@@ -5,6 +5,8 @@ require_once("./src/view/SweDateView.php");
 
 require_once("./src/model/UserModel.php");
 
+require_once("./src/view/CookieView.php");
+
 
 
 class LoginController {
@@ -23,7 +25,10 @@ class LoginController {
      */
     private $userModel;
 
-
+    /**
+     * @var CookieView
+     */
+    private $cookieView;
 
 
 
@@ -34,12 +39,27 @@ class LoginController {
         $this->sweDateView = new SweDateView();
 
         $this->userModel = new UserModel();
+
+        $this->cookieView = new CookieView();
     }
     public function render(){
+        if($this->cookieView->cookieExist()){
+            $cookieString = $this->cookieView->load();
+            // check userModel if cookie is valid.
+            if($this->userModel->checkUnique($cookieString)){
+                $this->authenticatedView->cookieLoginMSG();
+            }
+            else{
+                $this->loginView->failedCookieMSG();
+            }
+        }
+
         // If authenticated user, check if user pressed Logout. Then logout and present log out message.
         if($this->userModel->IsAuthenticated()){
             if($this->authenticatedView->userLoggedOut()){
+                // In here i will destroy cookie. TODO
                 $this->userModel->LogOut();
+                $this->cookieView->delete();
                 $this->loginView->successMSG();
             }
         }
@@ -49,12 +69,15 @@ class LoginController {
                 // Retrieve username and password string from LoginView from user post..
                 $password = $this->loginView->GetPassword();
                 $username = $this->loginView->GetUsername();
-
                 //check if successful log in.
                 if ($this->userModel->LogIn($username, $password)) {
                     $this->authenticatedView->successMSG();
-
-                    $this->loginView->saveCookie();
+                    // Create cookie if user clicked select box in login view.
+                        if($this->loginView->wantCookie()){
+                            $uniqueString = $this->userModel->GetUnique();
+                            $this->cookieView->save($uniqueString);
+                            $this->authenticatedView->cookieSuccessMSG();
+                        }
                     }
                 else{
                     //Present error msg if failed login.

@@ -4,6 +4,8 @@ require_once("./src/model/SessionModel.php");
 class UserModel{
     private $username = "Admin";
     private $password = "Password";
+    private $unique = "userCredentialsForCookieString";
+
     private $sessionModel;
 
     public function __construct() {
@@ -17,6 +19,18 @@ class UserModel{
      * @param $password
      * Sets my authenticated variable to true if correct username and password from LoginView.
      */
+    public function checkUnique($cookieString){
+        if($this->unique === $cookieString){
+            // Start new session if valid cookie.
+            $this->sessionModel->SetValidSession();
+            return true;
+        }
+            return false;
+    }
+    public function GetUnique(){
+        return $this->unique;
+    }
+
     public function logIn( $username, $password){
         //var_dump($this->username == $username && $this->password == $password);
         if ($this->username == $username && $this->password == $password) {

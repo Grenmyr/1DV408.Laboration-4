@@ -1,14 +1,10 @@
 <?php
-require_once("./src/helper/CookieHelper.php");
 class LoginView {
     private $message;
-    /**
-     * @var CookieHelper
-     */
-    private $cookieHelper;
+
 
     public  function __construct(){
-        $this->cookieHelper = new CookieHelper();
+
     }
     public function GetUsername(){
         if(isset($_POST["username"])){
@@ -22,10 +18,9 @@ class LoginView {
         }
     }
 
-    Public function saveCookie() {
+    Public function wantCookie() {
         // TODO: I need to Save Client Data here, on client as file, also post a copy to server..
         if(isset($_POST["LoginView::Checked"])){
-            $this->cookieHelper->save($this->GetUsername(),$this->GetPassword());
             return true;
         }
         return false;
@@ -34,6 +29,7 @@ class LoginView {
     public  function successMSG(){
         $this->message = "Du har nu loggat ut.";
     }
+
 
     public function FailedMSG($username,$password) {
         if($username===""){
@@ -45,6 +41,9 @@ class LoginView {
         else{
             $this->message .= "Felaktigt användarnamn och/eller lösenord.";
         }
+    }
+    public function failedCookieMSG(){
+        $this->message = "Felaktig information i cookie.";
     }
 
 
@@ -60,7 +59,7 @@ class LoginView {
         <h2>
     Ej Inloggad
 </h2>
-<form enctype=multipart/form-data method=post>
+<form enctype=multipart/form-data method=post action='?Login'>
 
     <fieldset>
         <legend>
