@@ -45,12 +45,14 @@ class LoginController {
     public function render(){
         if($this->cookieView->cookieExist()){
             $cookieString = $this->cookieView->load();
+            $cookieTime = $this->cookieView->GetExpire();
             // check userModel if cookie is valid.
-            if($this->userModel->checkUnique($cookieString)){
+            if($this->userModel->checkUnique($cookieString,$cookieTime)){
                 $this->authenticatedView->cookieLoginMSG();
             }
             else{
                 $this->loginView->failedCookieMSG();
+                $this->cookieView->delete();
             }
         }
 

@@ -19,17 +19,23 @@ class UserModel{
      * @param $password
      * Sets my authenticated variable to true if correct username and password from LoginView.
      */
-    public function checkUnique($cookieString){
-        if($this->unique === $cookieString){
+    public function checkUnique($cookieString,$cookieTime){
+        // Time() here could be manipulated by change client time, But that could also be dome if i decided to write
+        //Time into text dokument. Only server can give secure time, and since no server i just check Time() in $thislaboration.
+        var_dump($cookieTime,time());
+        if($this->unique === $cookieString&& $cookieTime > time()){
             // Start new session if valid cookie.
+
             $this->sessionModel->SetValidSession();
             return true;
         }
             return false;
     }
     public function GetUnique(){
+        //TODO Read from textfile expire date and compare.
         return $this->unique;
     }
+
 
     public function logIn( $username, $password){
         //var_dump($this->username == $username && $this->password == $password);
