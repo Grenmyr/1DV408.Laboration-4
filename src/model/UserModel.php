@@ -5,6 +5,7 @@ class UserModel{
     private $username = "Admin";
     private $password = "Password";
     private $unique = "userCredentialsForCookieString";
+    private $agent;
 
     private $sessionModel;
 
@@ -19,14 +20,14 @@ class UserModel{
      * @param $password
      * Sets my authenticated variable to true if correct username and password from LoginView.
      */
-    public function checkUnique($cookieString,$cookieTime){
+    public function checkUnique($cookieString,$cookieTime,$agent){
         // Time() here could be manipulated by change client time, But that could also be dome if i decided to write
         //Time into text dokument. Only server can give secure time, and since no server i just check Time() in $thislaboration.
         var_dump($cookieTime,time());
         if($this->unique === $cookieString&& $cookieTime > time()){
             // Start new session if valid cookie.
 
-            $this->sessionModel->SetValidSession();
+            $this->sessionModel->SetValidSession($agent);
             return true;
         }
             return false;
@@ -35,13 +36,16 @@ class UserModel{
         //TODO Read from textfile expire date and compare.
         return $this->unique;
     }
+    public  function SetAgent($agent){
+        $this->agent = $agent;
+    }
 
 
-    public function logIn( $username, $password){
+    public function logIn( $username, $password,$agent){
         //var_dump($this->username == $username && $this->password == $password);
         if ($this->username == $username && $this->password == $password) {
-
-            $this->sessionModel->SetValidSession();
+            $this->SetAgent($agent);
+            $this->sessionModel->SetValidSession($agent);
             return true;
         }
         return false;
@@ -50,8 +54,8 @@ class UserModel{
         $this->sessionModel->UnsetSession();
     }
 
-    public function IsAuthenticated(){
-        return $this->sessionModel->CheckValidSession();
+    public function IsAuthenticated($agent){
+        return $this->sessionModel->CheckValidSession($agent);
     }
 }
 /**
