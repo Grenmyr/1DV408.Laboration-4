@@ -1,35 +1,32 @@
 <?php
 class SessionModel {
-
    // Set a new session.
    public function __construct(){
        session_start();
    }
-    /**
-     * @return true or false.
+
+    /*
+     * This check if a valid Session, and a valid agent which it compare to stored agent in session.
+     * Then it return true to controller.
      */
     public  function CheckValidSession($agent){
-        // Satt här sist!
         if(isset($_SESSION["validSession"])&& isset($_SESSION['agent'])){
-            var_dump($_SESSION['agent']);
-            var_dump("variabel" .$agent);
             if($_SESSION['agent']=== $agent )
             return true;
         }
         return false;
     }
 
-
-    // used to set session.
+    // used to set session and and agent(string) into session.
     public function SetValidSession($agent){
         $_SESSION["validSession"]=true;
         $_SESSION["agent"] = $agent;
-        //var_dump($_SESSION["validSession"]);
     }
-    // not used right now, to be implemented in logout and timed.
+    // Remove session.
     public function UnsetSession(){
         unset($_SESSION['validSession']);
     }
+
    // Not implemented in application
    public function SaveMessage($string){
        $_SESSION["message"]= $string;

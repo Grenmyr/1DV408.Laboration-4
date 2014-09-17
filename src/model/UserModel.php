@@ -5,46 +5,38 @@ class UserModel{
     private $username = "Admin";
     private $password = "Password";
     private $unique = "userCredentialsForCookieString";
-    private $agent;
+    //private $agent;
 
     private $sessionModel;
 
     public function __construct() {
-        // Todo: Här i eller annan model klass ska jag kontrollera att input username och password från klient är
-        // Giltig data innan jag gör strängjämförelsen med min databas uppgift.
         $this->sessionModel = new SessionModel();
     }
 
-    /**
-     * @param $username
-     * @param $password
-     * Sets my authenticated variable to true if correct username and password from LoginView.
-     */
-    public function checkUnique($cookieString,$cookieTime,$agent){
-        // Time() here could be manipulated by change client time, But that could also be dome if i decided to write
-        //Time into text dokument. Only server can give secure time, and since no server i just check Time() in $thislaboration.
-        var_dump($cookieTime,time());
-        if($this->unique === $cookieString&& $cookieTime > time()){
-            // Start new session if valid cookie.
 
+    /**
+     * @param $cookieString
+     * @param $cookieTime
+     * @param $agent
+     * @return bool
+     * This function handles cookie log in, and checks for unique string, representing correct username and password saved earlier.
+     * Also check time has not been manipulated in cookie, and agent is if successful login saved into session.
+     */
+    public function cookieLogin($cookieString,$cookieTime,$agent){
+        if($this->unique === $cookieString&& $cookieTime > time()){
             $this->sessionModel->SetValidSession($agent);
             return true;
         }
             return false;
     }
+    // Return a string that represent correct password and username.
     public function GetUnique(){
-        //TODO Read from textfile expire date and compare.
         return $this->unique;
     }
-    public  function SetAgent($agent){
-        $this->agent = $agent;
-    }
-
 
     public function logIn( $username, $password,$agent){
         //var_dump($this->username == $username && $this->password == $password);
         if ($this->username == $username && $this->password == $password) {
-            $this->SetAgent($agent);
             $this->sessionModel->SetValidSession($agent);
             return true;
         }

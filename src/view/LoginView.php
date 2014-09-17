@@ -19,7 +19,6 @@ class LoginView {
     }
 
     Public function wantCookie() {
-        // TODO: I need to Save Client Data here, on client as file, also post a copy to server..
         if(isset($_POST["LoginView::Checked"])){
             return true;
         }
