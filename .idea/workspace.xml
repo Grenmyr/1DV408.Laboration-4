@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8cb42101-6320-4a60-8d20-8950846880f0" name="Default" comment="Klar testfall 3.6 i morgon ska jag kommentera/refaktorera sen göra om alla igen.">
+    <list default="true" id="8cb42101-6320-4a60-8d20-8950846880f0" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="1DV408Laboration2.iws" />
@@ -28,7 +28,7 @@
       <file leaf-file-name="CookieView.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/view/CookieView.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="37" selection-start="166" selection-end="166" vertical-scroll-proportion="-3.9230769" vertical-offset="0" max-vertical-offset="663">
+            <state line="6" column="37" selection-start="166" selection-end="166" vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="663">
               <folding />
             </state>
           </provider>
@@ -37,7 +37,7 @@
       <file leaf-file-name="LoginController.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/controller/LoginController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="81" column="60" selection-start="2422" selection-end="2422" vertical-scroll-proportion="0.63297874" vertical-offset="1020" max-vertical-offset="2142">
+            <state line="30" column="7" selection-start="566" selection-end="566" vertical-scroll-proportion="0.29577464" vertical-offset="405" max-vertical-offset="2142">
               <folding />
             </state>
           </provider>
@@ -55,7 +55,7 @@
       <file leaf-file-name="UserModel.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/model/UserModel.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="56" column="44" selection-start="1990" selection-end="1990" vertical-scroll-proportion="-11.884615" vertical-offset="643" max-vertical-offset="1207">
+            <state line="56" column="44" selection-start="1990" selection-end="1990" vertical-scroll-proportion="0.0" vertical-offset="643" max-vertical-offset="1207">
               <folding />
             </state>
           </provider>
@@ -64,7 +64,7 @@
       <file leaf-file-name="AgentHelper.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/helpers/AgentHelper.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="28" selection-start="76" selection-end="84" vertical-scroll-proportion="0.0" vertical-offset="68" max-vertical-offset="391">
+            <state line="10" column="5" selection-start="220" selection-end="220" vertical-scroll-proportion="0.0" vertical-offset="170" max-vertical-offset="391">
               <folding />
             </state>
           </provider>
@@ -100,7 +100,7 @@
       <file leaf-file-name="SessionModel.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/model/SessionModel.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="33" selection-start="385" selection-end="385" vertical-scroll-proportion="-7.1923075" vertical-offset="51" max-vertical-offset="901">
+            <state line="14" column="33" selection-start="385" selection-end="385" vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="901">
               <folding />
             </state>
           </provider>
@@ -484,21 +484,24 @@
       <created>1410878501041</created>
       <updated>1410878501041</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Klar testfall 3.6 i morgon ska jag kommentera/refaktorera sen göra om alla igen.">
+      <created>1410878618735</created>
+      <updated>1410878618735</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32810047" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32810047" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32967034" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32810047" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24304539" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24304539" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.38897637" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32810047" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -506,10 +509,11 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32810047" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -892,37 +896,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/helpers/AgentHelper.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="28" selection-start="76" selection-end="84" vertical-scroll-proportion="0.0" vertical-offset="68" max-vertical-offset="391">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/model/UserModel.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="44" selection-start="1990" selection-end="1990" vertical-scroll-proportion="-11.884615" vertical-offset="643" max-vertical-offset="1207">
+        <state line="56" column="44" selection-start="1990" selection-end="1990" vertical-scroll-proportion="0.0" vertical-offset="643" max-vertical-offset="1207">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/model/SessionModel.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="33" selection-start="385" selection-end="385" vertical-scroll-proportion="-7.1923075" vertical-offset="51" max-vertical-offset="901">
+        <state line="14" column="33" selection-start="385" selection-end="385" vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="901">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/view/CookieView.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="37" selection-start="166" selection-end="166" vertical-scroll-proportion="-3.9230769" vertical-offset="0" max-vertical-offset="663">
+        <state line="6" column="37" selection-start="166" selection-end="166" vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="663">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/helpers/AgentHelper.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="5" selection-start="220" selection-end="220" vertical-scroll-proportion="0.0" vertical-offset="170" max-vertical-offset="391">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/controller/LoginController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="81" column="60" selection-start="2422" selection-end="2422" vertical-scroll-proportion="0.63297874" vertical-offset="1020" max-vertical-offset="2142">
+        <state line="30" column="7" selection-start="566" selection-end="566" vertical-scroll-proportion="0.29577464" vertical-offset="405" max-vertical-offset="2142">
           <folding />
         </state>
       </provider>
