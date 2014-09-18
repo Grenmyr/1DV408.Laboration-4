@@ -4,8 +4,8 @@ require_once("./src/model/SessionModel.php");
 class UserModel{
     private $username = "Admin";
     private $password = "Password";
+    // If multiple users this unique is random and stored in databasse.
     private $unique = "userCredentialsForCookieString";
-    //private $agent;
 
     private $sessionModel;
 

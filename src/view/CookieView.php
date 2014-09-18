@@ -4,7 +4,8 @@ class CookieView {
     private $cookieTime;
 
     public function save($unique) {
-        $this->cookieTime = time()+3000;
+        $this->cookieTime = time()+120;
+        //If mutiple users store this data in database.
         file_put_contents("cookietime.txt",$this->cookieTime);
         setcookie( $this->cookieName, $unique, $this->cookieTime);
     }

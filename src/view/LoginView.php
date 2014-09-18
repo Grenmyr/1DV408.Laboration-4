@@ -58,6 +58,7 @@ class LoginView {
         <h2>
     Ej Inloggad
 </h2>
+<p> För testning:Kakors tid är 2 minuter.</p>
 <form enctype=multipart/form-data method=post action='?Login'>
 
     <fieldset>
@@ -71,7 +72,8 @@ class LoginView {
         <input type='text' size='25' name='username' value='$username'>
         <label> Lösenord </label>
         <input type='password' size='25' name='password' value='$password'>
-        <input type='checkbox' name='LoginView::Checked' id='AutologinID' />
+        <label>Håll mig inloggad</label>
+        <input type='checkbox' name='LoginView::Checked' id='AutologinID'/>
         <input type='submit' value='Logga in' name='submitButton'>
     </fieldset>
 </form>
