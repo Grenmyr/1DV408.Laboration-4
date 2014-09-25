@@ -1,11 +1,11 @@
 <?php
-require_once("src/view/HTMLView.php");
-require_once("src/controller/LoginController.php");
+require_once("src/Helpers/HTMLView.php");
+require_once("src/controller/MasterController.php");
 
 $htmlView = new HTMLView();
-$lc = new LoginController();
+$mc = new MasterController();
 
-$loginContent = $lc->render();
+$loginContent = $mc->render();
 $htmlView->echoHTML($loginContent);
 
 

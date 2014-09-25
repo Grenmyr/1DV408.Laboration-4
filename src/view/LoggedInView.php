@@ -1,5 +1,5 @@
 <?php
-class AuthenticatedView {
+class LoggedInView {
     private $logOut = "logout";
     private $message = "";
     // Return true if submit.

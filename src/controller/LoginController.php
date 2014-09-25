@@ -1,5 +1,5 @@
 <?php
-require_once("./src/view/AuthenticatedView.php");
+require_once("./src/view/LoggedInView.php");
 require_once("./src/view/LoginView.php");
 require_once("./src/view/SweDateView.php");
 
@@ -40,7 +40,7 @@ class LoginController {
 
 
     public  function __construct(){
-        $this->authenticatedView = new AuthenticatedView();
+        $this->authenticatedView = new LoggedInView();
         $this->loginView = new LoginView();
         $this->sweDateView = new SweDateView();
 
