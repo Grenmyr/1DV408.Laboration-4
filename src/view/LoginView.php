@@ -1,10 +1,14 @@
 <?php
 class LoginView {
     private $message;
+    /**
+     * @var URLView
+     */
+    private $urlView;
 
 
-    public  function __construct(){
-
+    public  function __construct($urlView){
+        $this->urlView = $urlView;
     }
     public function GetUsername(){
         if(isset($_POST["username"])){
@@ -54,12 +58,13 @@ class LoginView {
     public function show (){
         $username = $this->GetUsername();
         $password = $this->GetPassword();
+        $loginUrl = $this->urlView->getLoggedInUrl();
         $ret ="<h1>Laborationskod dg222cs</h1>
         <h2>
     Ej Inloggad
 </h2>
 <p> För testning:Kakors tid är 2 minuter.</p>
-<form enctype=multipart/form-data method=post action='?Login'>
+<form enctype=multipart/form-data method=post action='$loginUrl'>
 
     <fieldset>
         <legend>

@@ -2,7 +2,11 @@
 class LoggedInView {
     private $logOut = "logout";
     private $message = "";
-    // Return true if submit.
+    private $urlView;
+
+    public function __construct($URLView){
+        $this->urlView = $URLView;
+    }
     public function userLoggedOut(){
         return isset($_GET[$this->logOut]);
     }

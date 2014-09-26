@@ -2,10 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8cb42101-6320-4a60-8d20-8950846880f0" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/view/CookieView.php" afterPath="$PROJECT_DIR$/src/view/CookieView.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/view/URLView.php" />
+      <change type="MOVED" beforePath="C:\Users\dav\PhpstormProjects\1DV408.Laboration-4\.idea\1DV408Laboration2.iml" afterPath="$PROJECT_DIR$/.idea/1DV408Laboration4.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.name" afterPath="$PROJECT_DIR$/.idea/.name" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/view/LoggedInView.php" afterPath="$PROJECT_DIR$/src/view/LoggedInView.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/controller/LoginController.php" afterPath="$PROJECT_DIR$/src/controller/LoginController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/view/LoginView.php" afterPath="$PROJECT_DIR$/src/view/LoginView.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/view/SweDateView.php" afterPath="$PROJECT_DIR$/src/view/SweDateView.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/UserModel.php" afterPath="$PROJECT_DIR$/src/model/UserModel.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/controller/MasterController.php" afterPath="$PROJECT_DIR$/src/controller/MasterController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/php.xml" afterPath="$PROJECT_DIR$/.idea/php.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="1DV408Laboration2.iws" />
@@ -32,31 +37,17 @@
       <file leaf-file-name="CookieView.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/view/CookieView.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="38" selection-start="167" selection-end="167" vertical-scroll-proportion="-3.9230769" vertical-offset="0" max-vertical-offset="680">
+            <state line="6" column="38" selection-start="167" selection-end="167" vertical-scroll-proportion="0.0" vertical-offset="139" max-vertical-offset="680">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserModel.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/model/UserModel.php">
+      <file leaf-file-name="AgentHelper.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Helpers/AgentHelper.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="71" selection-start="210" selection-end="210" vertical-scroll-proportion="-0.84615386" vertical-offset="80" max-vertical-offset="1071">
+            <state line="4" column="7" selection-start="63" selection-end="63" vertical-scroll-proportion="0.0" vertical-offset="68" max-vertical-offset="391">
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HTMLView.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/view/HTMLView.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="34" selection-start="57" selection-end="57" vertical-scroll-proportion="-1.3076923" vertical-offset="0" max-vertical-offset="544">
-              <folding>
-                <marker date="1410946133000" expanded="true" signature="191:405" placeholder="..." />
-                <marker date="1410946133000" expanded="true" signature="206:299" placeholder="..." />
-                <marker date="1410946133000" expanded="true" signature="314:389" placeholder="..." />
-                <marker date="1410946133000" expanded="true" signature="344:373" placeholder="..." />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -64,32 +55,79 @@
       <file leaf-file-name="LoginView.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/view/LoginView.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="59" column="5" selection-start="1343" selection-end="1343" vertical-scroll-proportion="-9.192307" vertical-offset="764" max-vertical-offset="1615">
+            <state line="60" column="53" selection-start="1415" selection-end="1415" vertical-scroll-proportion="-8.692307" vertical-offset="794" max-vertical-offset="1700">
               <folding>
-                <marker date="1411031211640" expanded="true" signature="1320:1342" placeholder="..." />
-                <marker date="1411031211640" expanded="true" signature="1451:2031" placeholder="..." />
-                <marker date="1411031211640" expanded="true" signature="1467:2023" placeholder="..." />
-                <marker date="1411031211640" expanded="true" signature="1484:1557" placeholder="..." />
-                <marker date="1411031211640" expanded="true" signature="1586:2012" placeholder="..." />
-                <marker date="1411031211640" expanded="true" signature="1602:1641" placeholder="..." />
+                <marker date="1411662605358" expanded="true" signature="1474:1496" placeholder="..." />
+                <marker date="1411662605358" expanded="true" signature="1608:2188" placeholder="..." />
+                <marker date="1411662605358" expanded="true" signature="1624:2180" placeholder="..." />
+                <marker date="1411662605358" expanded="true" signature="1641:1714" placeholder="..." />
+                <marker date="1411662605358" expanded="true" signature="1743:2169" placeholder="..." />
+                <marker date="1411662605358" expanded="true" signature="1759:1798" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SweDateView.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="SweDateView.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/view/SweDateView.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="32" selection-start="195" selection-end="195" vertical-scroll-proportion="0.31034482" vertical-offset="71" max-vertical-offset="680">
+            <state line="20" column="0" selection-start="575" selection-end="575" vertical-scroll-proportion="0.0" vertical-offset="340" max-vertical-offset="680">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SessionModel.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/model/SessionModel.php">
+      <file leaf-file-name="RegisterView.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/view/RegisterView.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="24" selection-start="673" selection-end="678" vertical-scroll-proportion="-12.423077" vertical-offset="51" max-vertical-offset="850">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="272">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LoggedInView.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/view/LoggedInView.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="5" column="0" selection-start="108" selection-end="108" vertical-scroll-proportion="0.0" vertical-offset="85" max-vertical-offset="748">
+              <folding>
+                <marker date="1411661463196" expanded="true" signature="695:740" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RegisterController.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/controller/RegisterController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="272">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MasterController.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/controller/MasterController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="17" column="0" selection-start="554" selection-end="554" vertical-scroll-proportion="0.0" vertical-offset="289" max-vertical-offset="595">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LoginController.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/controller/LoginController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="42" column="60" selection-start="763" selection-end="763" vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="2091">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="URLView.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/view/URLView.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="26" column="5" selection-start="534" selection-end="534" vertical-scroll-proportion="0.65745854" vertical-offset="0" max-vertical-offset="543">
               <folding />
             </state>
           </provider>
@@ -110,31 +148,33 @@
       <list>
         <option value="$PROJECT_DIR$/src/view/Home.php" />
         <option value="$PROJECT_DIR$/src/view/HomeView.php" />
-        <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/src/Helpers/Cookie.php" />
         <option value="$PROJECT_DIR$/src/helpers/Cookie.php" />
         <option value="$PROJECT_DIR$/src/helper/CookieHelper.php" />
-        <option value="$PROJECT_DIR$/src/view/AuthenticatedView.php" />
         <option value="$PROJECT_DIR$/src/helpers/ServerHelper.php" />
         <option value="$PROJECT_DIR$/src/helpers/AgentHelper.php" />
         <option value="$PROJECT_DIR$/src/model/SessionModel.php" />
         <option value="$PROJECT_DIR$/src/view/HTMLView.php" />
-        <option value="$PROJECT_DIR$/src/controller/LoginController.php" />
         <option value="$PROJECT_DIR$/src/view/SweDateView.php" />
         <option value="$PROJECT_DIR$/src/view/CookieView.php" />
         <option value="$PROJECT_DIR$/src/model/UserModel.php" />
+        <option value="$PROJECT_DIR$/src/view/AuthenticatedView.php" />
+        <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/src/controller/MasterController.php" />
+        <option value="$PROJECT_DIR$/src/controller/LoginController.php" />
+        <option value="$PROJECT_DIR$/src/view/LoggedInView.php" />
         <option value="$PROJECT_DIR$/src/view/LoginView.php" />
+        <option value="$PROJECT_DIR$/src/view/URLView.php" />
       </list>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="php">
     <include_path>
-      <path value="C:\Users\dav\Documents\GitHub\1DV408Laboration2" />
+      <path value="C:\Users\dav\PhpstormProjects\1DV408.Laboration-4" />
     </include_path>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
+    <option name="x" value="-1" />
     <option name="width" value="1382" />
     <option name="height" value="744" />
   </component>
@@ -209,27 +249,27 @@
         <subPane>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="1DV408Laboration2" />
+              <option name="myItemId" value="1DV408Laboration4" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="1DV408Laboration2" />
+              <option name="myItemId" value="1DV408Laboration4" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="1DV408Laboration2" />
+              <option name="myItemId" value="1DV408.Laboration-4" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="1DV408Laboration2" />
+              <option name="myItemId" value="1DV408Laboration4" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="1DV408Laboration2" />
+              <option name="myItemId" value="1DV408.Laboration-4" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -243,11 +283,11 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="1DV408Laboration2" />
+              <option name="myItemId" value="1DV408Laboration4" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="1DV408Laboration2" />
+              <option name="myItemId" value="1DV408.Laboration-4" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -261,15 +301,37 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="1DV408Laboration2" />
+              <option name="myItemId" value="1DV408Laboration4" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="1DV408Laboration2" />
+              <option name="myItemId" value="1DV408.Laboration-4" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Helpers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="1DV408Laboration4" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="1DV408.Laboration-4" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controller" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -285,7 +347,7 @@
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="FullScreen" value="false" />
     <property name="recentsLimit" value="5" />
-    <property name="last_opened_file_path" value="C:/Program Files (x86)/EasyPHP-DevServer-14.1VC11" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="SearchEverywhereHistory" value="" />
     <property name="LayoutCode.rearrangeEntriesPHP" value="false" />
     <property name="ChangesBrowser.SHOW_FLATTEN" value="false" />
@@ -300,6 +362,9 @@
       <recent name="C:\Users\dav\Documents\GitHub\1DV408Laboration2" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\dav\PhpstormProjects\1DV408.Laboration-4\src\Helpers" />
+      <recent name="C:\Users\dav\PhpstormProjects\1DV408.Laboration-4\src\view" />
+      <recent name="C:\Users\dav\PhpstormProjects\1DV408.Laboration-4\src\controller" />
       <recent name="C:\Users\dav\Documents\GitHub\1DV408Laboration2\src\view" />
     </key>
   </component>
@@ -468,7 +533,11 @@
       <created>1410950598557</created>
       <updated>1410950598557</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="#content&#10;Börjat sätta upp struktur för laboration4.">
+      <created>1411660412806</created>
+      <updated>1411660412807</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -492,27 +561,27 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-1" y="0" width="1382" height="744" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32899022" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32899022" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32899022" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32930514" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.38897637" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32810047" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32899022" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3403909" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32899022" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25830814" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32930514" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27114803" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.38897637" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32810047" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32899022" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32899022" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32736155" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3403909" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3987441" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -551,13 +620,29 @@
     <MESSAGE value="Klar testfall 3.6 i morgon ska jag kommentera/refaktorera sen göra om alla igen." />
     <MESSAGE value="Feat Klar alla krav laboration 2." />
     <MESSAGE value="Bugfix efter testning på hotell har klocka, samt selectbox fixats." />
-    <option name="LAST_COMMIT_MESSAGE" value="Bugfix efter testning på hotell har klocka, samt selectbox fixats." />
+    <MESSAGE value="#content&#10;Börjat sätta upp struktur för laboration4." />
+    <option name="LAST_COMMIT_MESSAGE" value="#content&#10;Börjat sätta upp struktur för laboration4." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/view/HTMLView.php">
+    <entry file="file://$PROJECT_DIR$/src/model/UserModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="0" selection-start="582" selection-end="582" vertical-scroll-proportion="0.0" vertical-offset="340" max-vertical-offset="765" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/SessionModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="44" column="2" selection-start="1056" selection-end="1056" vertical-scroll-proportion="0.0" vertical-offset="199" max-vertical-offset="850" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="0" selection-start="97" selection-end="97" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="408" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Helpers/HTMLView.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="34" selection-start="52" selection-end="57" vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="493" />
       </provider>
@@ -567,7 +652,7 @@
         <state line="26" column="0" selection-start="479" selection-end="479" vertical-scroll-proportion="0.0" vertical-offset="187" max-vertical-offset="918" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/AuthenticatedView.php">
+    <entry file="file://$PROJECT_DIR$/src/view/LoggedInView.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="663" />
       </provider>
@@ -592,42 +677,7 @@
         <state line="3" column="0" selection-start="97" selection-end="97" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="408" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/HTMLView.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="34" selection-start="52" selection-end="57" vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="493" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/LoginView.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="0" selection-start="479" selection-end="479" vertical-scroll-proportion="0.0" vertical-offset="187" max-vertical-offset="918" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/AuthenticatedView.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="663" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/LoginController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="5" selection-start="5" selection-end="5" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1037" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/UserModel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="0" selection-start="582" selection-end="582" vertical-scroll-proportion="0.0" vertical-offset="340" max-vertical-offset="765" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/SessionModel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="2" selection-start="1056" selection-end="1056" vertical-scroll-proportion="0.0" vertical-offset="199" max-vertical-offset="850" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="0" selection-start="97" selection-end="97" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="408" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/HTMLView.php">
+    <entry file="file://$PROJECT_DIR$/src/Helpers/HTMLView.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="34" selection-start="52" selection-end="57" vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="493" />
       </provider>
@@ -637,7 +687,7 @@
         <state line="11" column="24" selection-start="234" selection-end="234" vertical-scroll-proportion="0.0" vertical-offset="187" max-vertical-offset="918" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/AuthenticatedView.php">
+    <entry file="file://$PROJECT_DIR$/src/view/LoggedInView.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="7" column="21" selection-start="193" selection-end="193" vertical-scroll-proportion="0.0" vertical-offset="29" max-vertical-offset="663" />
       </provider>
@@ -662,7 +712,7 @@
         <state line="3" column="0" selection-start="97" selection-end="97" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="408" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/HTMLView.php">
+    <entry file="file://$PROJECT_DIR$/src/Helpers/HTMLView.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="34" selection-start="52" selection-end="57" vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="493" />
       </provider>
@@ -672,7 +722,7 @@
         <state line="11" column="24" selection-start="234" selection-end="234" vertical-scroll-proportion="0.0" vertical-offset="187" max-vertical-offset="918" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/AuthenticatedView.php">
+    <entry file="file://$PROJECT_DIR$/src/view/LoggedInView.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="20" selection-start="154" selection-end="154" vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="612" />
       </provider>
@@ -697,7 +747,7 @@
         <state line="21" column="4" selection-start="402" selection-end="402" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="459" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/HTMLView.php">
+    <entry file="file://$PROJECT_DIR$/src/Helpers/HTMLView.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="34" selection-start="52" selection-end="57" vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="493" />
       </provider>
@@ -722,7 +772,7 @@
         <state line="4" column="0" selection-start="85" selection-end="140" vertical-scroll-proportion="0.0" vertical-offset="68" max-vertical-offset="323" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/HTMLView.php">
+    <entry file="file://$PROJECT_DIR$/src/Helpers/HTMLView.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="10" column="7" selection-start="215" selection-end="221" vertical-scroll-proportion="0.0" vertical-offset="170" max-vertical-offset="442" />
       </provider>
@@ -762,78 +812,101 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="13668" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/helpers/AgentHelper.php">
+    <entry file="file://$PROJECT_DIR$/src/model/SessionModel.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="7" selection-start="134" selection-end="134" vertical-scroll-proportion="-2.6153846" vertical-offset="0" max-vertical-offset="357" />
+        <state line="22" column="24" selection-start="673" selection-end="678" vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="850" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="0" selection-start="225" selection-end="225" vertical-scroll-proportion="0.33274022" vertical-offset="0" max-vertical-offset="562" />
+        <state line="10" column="0" selection-start="229" selection-end="229" vertical-scroll-proportion="-6.5384617" vertical-offset="0" max-vertical-offset="408" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/LoginController.php">
+    <entry file="file://$PROJECT_DIR$/src/view/RegisterView.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="102" column="56" selection-start="3484" selection-end="3484" vertical-scroll-proportion="0.36476868" vertical-offset="1529" max-vertical-offset="2091" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/AuthenticatedView.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="29" selection-start="55" selection-end="61" vertical-scroll-proportion="-0.0" vertical-offset="34" max-vertical-offset="680">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/SessionModel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="24" selection-start="673" selection-end="678" vertical-scroll-proportion="-12.423077" vertical-offset="51" max-vertical-offset="850">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/HTMLView.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="34" selection-start="57" selection-end="57" vertical-scroll-proportion="-1.3076923" vertical-offset="0" max-vertical-offset="544">
-          <folding>
-            <marker date="1410946133000" expanded="true" signature="191:405" placeholder="..." />
-            <marker date="1410946133000" expanded="true" signature="206:299" placeholder="..." />
-            <marker date="1410946133000" expanded="true" signature="314:389" placeholder="..." />
-            <marker date="1410946133000" expanded="true" signature="344:373" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/CookieView.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="38" selection-start="167" selection-end="167" vertical-scroll-proportion="-3.9230769" vertical-offset="0" max-vertical-offset="680">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/LoginView.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="59" column="5" selection-start="1343" selection-end="1343" vertical-scroll-proportion="-9.192307" vertical-offset="764" max-vertical-offset="1615">
-          <folding>
-            <marker date="1411031211640" expanded="true" signature="1320:1342" placeholder="..." />
-            <marker date="1411031211640" expanded="true" signature="1451:2031" placeholder="..." />
-            <marker date="1411031211640" expanded="true" signature="1467:2023" placeholder="..." />
-            <marker date="1411031211640" expanded="true" signature="1484:1557" placeholder="..." />
-            <marker date="1411031211640" expanded="true" signature="1586:2012" placeholder="..." />
-            <marker date="1411031211640" expanded="true" signature="1602:1641" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/UserModel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="71" selection-start="210" selection-end="210" vertical-scroll-proportion="-0.84615386" vertical-offset="80" max-vertical-offset="1071">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="569">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/view/SweDateView.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="32" selection-start="195" selection-end="195" vertical-scroll-proportion="0.31034482" vertical-offset="71" max-vertical-offset="680">
+        <state line="20" column="0" selection-start="575" selection-end="575" vertical-scroll-proportion="0.0" vertical-offset="340" max-vertical-offset="680">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/view/LoggedInView.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="0" selection-start="108" selection-end="108" vertical-scroll-proportion="0.0" vertical-offset="85" max-vertical-offset="748">
+          <folding>
+            <marker date="1411661463196" expanded="true" signature="695:740" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/view/CookieView.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="38" selection-start="167" selection-end="167" vertical-scroll-proportion="0.0" vertical-offset="139" max-vertical-offset="680">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Helpers/HTMLView.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="34" selection-start="57" selection-end="57" vertical-scroll-proportion="0.06284658" vertical-offset="0" max-vertical-offset="544" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Helpers/AgentHelper.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="7" selection-start="63" selection-end="63" vertical-scroll-proportion="0.0" vertical-offset="68" max-vertical-offset="391">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/UserModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="71" selection-start="210" selection-end="210" vertical-scroll-proportion="-3.9230769" vertical-offset="0" max-vertical-offset="1071" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/LoginController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="42" column="60" selection-start="763" selection-end="763" vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="2091">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/RegisterController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="567">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/MasterController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="0" selection-start="554" selection-end="554" vertical-scroll-proportion="0.0" vertical-offset="289" max-vertical-offset="595">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/view/LoginView.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="60" column="53" selection-start="1415" selection-end="1415" vertical-scroll-proportion="-8.692307" vertical-offset="794" max-vertical-offset="1700">
+          <folding>
+            <marker date="1411662605358" expanded="true" signature="1474:1496" placeholder="..." />
+            <marker date="1411662605358" expanded="true" signature="1608:2188" placeholder="..." />
+            <marker date="1411662605358" expanded="true" signature="1624:2180" placeholder="..." />
+            <marker date="1411662605358" expanded="true" signature="1641:1714" placeholder="..." />
+            <marker date="1411662605358" expanded="true" signature="1743:2169" placeholder="..." />
+            <marker date="1411662605358" expanded="true" signature="1759:1798" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/view/URLView.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="5" selection-start="534" selection-end="534" vertical-scroll-proportion="0.65745854" vertical-offset="0" max-vertical-offset="543">
           <folding />
         </state>
       </provider>

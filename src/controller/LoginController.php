@@ -39,9 +39,9 @@ class LoginController {
 
 
 
-    public  function __construct(){
-        $this->authenticatedView = new LoggedInView();
-        $this->loginView = new LoginView();
+    public  function __construct($URLView){
+        $this->authenticatedView = new LoggedInView($URLView);
+        $this->loginView = new LoginView($URLView);
         $this->sweDateView = new SweDateView();
 
         $this->userModel = new UserModel();
