@@ -11,7 +11,10 @@ require_once("./src/helpers/AgentHelper.php");
 
 
 class LoginController {
-    private $authenticatedView;
+    /*
+     * @var LoggedInView
+     */
+    private $loggedInView;
     /**
      * @var LoginView
      */
@@ -40,7 +43,7 @@ class LoginController {
 
 
     public  function __construct($URLView){
-        $this->authenticatedView = new LoggedInView($URLView);
+        $this->loggedInView = new LoggedInView($URLView);
         $this->loginView = new LoginView($URLView);
         $this->sweDateView = new SweDateView();
 
@@ -57,7 +60,7 @@ class LoginController {
             $cookieTime = $this->cookieView->GetExpire();
             // check userModel if cookie is valid.
             if($this->userModel->cookieLogin($cookieString,$cookieTime,$agent)){
-                $this->authenticatedView->cookieLoginMSG();
+                $this->loggedInView->cookieLoginMSG();
             }
             else{
                 $this->loginView->failedCookieMSG();
@@ -67,7 +70,7 @@ class LoginController {
 
         // If authenticated user, check if user pressed Logout. Then logout and present log out message.
         if($this->userModel->IsAuthenticated($agent)){
-            if($this->authenticatedView->userLoggedOut()){
+            if($this->loggedInView->userLoggedOut()){
                 $this->userModel->LogOut();
                 $this->cookieView->delete();
                 $this->loginView->successMSG();
@@ -83,13 +86,13 @@ class LoginController {
                 if ($this->userModel->LogIn($username, $password,$trueAgent)) {
 
 
-                    $this->authenticatedView->successMSG();
+                    $this->loggedInView->successMSG();
                     // Create cookie if user clicked select box in login view.
                         if($this->loginView->wantCookie()){
                             // Get uniqueString from UserModel that is stored in cookie.
                             $uniqueString = $this->userModel->GetUnique();
                             $this->cookieView->save($uniqueString);
-                            $this->authenticatedView->cookieSuccessMSG();
+                            $this->loggedInView->cookieSuccessMSG();
                         }
                     }
                 else{
@@ -101,7 +104,7 @@ class LoginController {
 
        // After checking For user input previously, then either show login view or logout view.
         if($this->userModel->IsAuthenticated($agent) ) {
-           return $this->authenticatedView->show()
+           return $this->loggedInView->show()
                   . $this->sweDateView->show();
         }
         else{

@@ -43,6 +43,7 @@ class UserModel{
         return false;
     }
     public function LogOut(){
+
         $this->sessionModel->UnsetSession();
     }
 

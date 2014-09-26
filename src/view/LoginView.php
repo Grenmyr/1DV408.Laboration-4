@@ -11,15 +11,11 @@ class LoginView {
         $this->urlView = $urlView;
     }
     public function GetUsername(){
-        if(isset($_POST["username"])){
-        return($_POST["username"]);
-        }
+        return (isset($_POST["username"])) ? $_POST["username"] : '';
     }
 
     Public function GetPassword(){
-        if(isset($_POST["password"])){
-        return($_POST["password"]);
-        }
+        return (isset($_POST["password"])) ? $_POST["password"] : '';
     }
 
     Public function wantCookie() {
@@ -52,39 +48,38 @@ class LoginView {
 
     // Return true if submit.
     public function userSubmit(){
-        return isset($_POST['submitButton']);
+        if  (isset($_POST['submitButton'])){
+
+            return true;
+        }
+        return false;
     }
 
     public function show (){
         $username = $this->GetUsername();
         $password = $this->GetPassword();
-        $loginUrl = $this->urlView->getLoggedInUrl();
-        $ret ="<h1>Laborationskod dg222cs</h1>
-        <h2>
-    Ej Inloggad
-</h2>
-<p> För testning:Kakors tid är 2 minuter.</p>
-<form enctype=multipart/form-data method=post action='$loginUrl'>
-
-    <fieldset>
-        <legend>
-            Login - Skriv in användarnamn och lösenord
-        </legend>
-        <p>$this->message<p>
-        <label>
-        Användarnamn:
-        </label>
-        <input type='text' size='25' name='username' value='$username'>
-        <label> Lösenord </label>
-        <input type='password' size='25' name='password' value='$password'>
-        <label>Håll mig inloggad</label>
-        <input type='checkbox' name='LoginView::Checked' id='AutologinID'/>
-        <input type='submit' value='Logga in' name='submitButton'>
-    </fieldset>
-</form>
-
+        return "
+            <h1>Laborationskod dg222cs</h1>
+            <h2>Ej Inloggad</h2>
+            <form enctype=multipart/form-data method=post action='" . URLView::$logginPath . "'>
+                   <a href='" . URLView::$registerPath . "'>Registrera ny användare</a>
+                <fieldset>
+                    <legend>
+                        Login - Skriv in användarnamn och lösenord
+                    </legend>
+                    <p>$this->message<p>
+                    <label>
+                    Användarnamn:
+                    </label>
+                    <input type='text' size='25' name='username' value='$username'>
+                    <label> Lösenord </label>
+                    <input type='password' size='25' name='password' value='$password'>
+                    <label>Håll mig inloggad</label>
+                    <input type='checkbox' name='LoginView::Checked' id='AutologinID'/>
+                    <input type='submit' value='Logga in' name='submitButton'>
+                </fieldset>
+            </form>
         ";
-        return $ret;
     }
 }
 /**

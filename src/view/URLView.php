@@ -7,22 +7,21 @@
  */
 
 class URLView {
+    public  static $logginPath = '?path=login';
+    public  static $registerPath = '?path=register';
+    public static $logoutPath = 'logout';
+
     public function isLoggedIn(){
-        return $this->getPath() === 'loggedin';
+        return $this->GetPath() === self::$logginPath;
     }
     public function isRegister(){
-        return $this->getPath() === 'register';
+        return $this->GetPath() === self::$registerPath;
     }
-    public function getPath(){
+    public function GetPath(){
         // Get what path i am on.
-
         if(isset($_GET['path'])){
             return $_GET['path'];
         }
-        return 'register';
-    }
-
-    public function getLoggedInUrl() {
-        return '?path=loggedin';
+        return 'login';
     }
 } 

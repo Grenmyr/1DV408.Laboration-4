@@ -1,15 +1,19 @@
 <component name="ProjectDictionaryState">
   <dictionary name="dav">
     <words>
+      <w>användare</w>
       <w>användarnamn</w>
       <w>implementerad</w>
       <w>inloggad</w>
       <w>inloggning</w>
       <w>laborationskod</w>
       <w>logga</w>
+      <w>loggedin</w>
+      <w>loggedout</w>
       <w>lyckades</w>
       <w>lösenord</w>
       <w>multipart</w>
+      <w>registrerar</w>
       <w>skriv</w>
     </words>
   </dictionary>
