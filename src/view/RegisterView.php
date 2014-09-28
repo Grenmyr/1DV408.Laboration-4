@@ -5,13 +5,46 @@ class RegisterView {
      * @var URLView
      */
     private $urlView;
-    public function __construct($URLView){
+
+    /**
+     * @var UserModel
+     */
+    private $userModel;
+    private $message =[];
+    public function __construct($URLView,$userModel){
         $this->urlView = $URLView;
+        $this->userModel = $userModel;
+    }
+
+
+    // Return true if user press register button.
+    public function userSubmit(){
+        if  (isset($_POST['registerButton'])){
+            try{
+            $this->userModel->registerUser($this->GetUsername());
+            }
+            catch(\src\Exception\RegisterException $e){
+                $this->message[] = $e->getMessage();
+            }
+
+            if($this->GetPassword1()=== $this->GetPassword2()){
+                try{
+                    $this->userModel->registerPassword($this->GetPassword1());
+                }
+                catch(\src\Exception\RegisterException $e){
+                    $this->message[] = $e->getMessage();
+                }
+            }
+            else{
+                $this->message[] = " Lösenorden matchar inte";
+            }
+        }
     }
 
     public function GetUsername(){
         if(isset($_POST["username"])){
             return($_POST["username"]);
+
         }
         return false;
     }
@@ -29,21 +62,31 @@ class RegisterView {
         return false;
     }
 
-
+    public function renderMessages(){
+        $dom = '';
+        if(is_array($this->message )){
+        foreach ($this->message as $messages){
+            $dom .= "<p>$messages</p>";
+        }
+        }
+        return $dom;
+    }
     public function show(){
         $username = $this->GetUsername();
         $password1 = $this->GetPassword1();
         $password2 = $this->GetPassword2();
+        $message = $this->renderMessages();
         $ret ="<h1>Laborationskod dg222cs</h1>
         <h2>
     Ej Inloggad, Registrerar användare
 </h2>
 <form enctype=multipart/form-data method=post action='" . URLView::$registerPath . "'>
-    <a href='" . URLView::$logginPath . "'>Registrera ny användare</a>
+    <a href='" . URLView::$logginPath . "'>Tillbaka</a>
     <fieldset>
         <legend>
             Registrera ny användare -Skriv in användarnamn och lösenord
         </legend>
+        <div> $message </div>
         <label>
         Namn:
         </label>
@@ -52,7 +95,7 @@ class RegisterView {
         <input type='password' size='25' name='password1' value='$password1'>
         <label> Repetera Lösenord</label>
         <input type='password' size='25' name='password2' value='$password2'>
-        <input type='submit' value='Logga in' name='registerButton'>
+        <input type='submit' value='Registrera' name='registerButton'>
     </fieldset>
 </form>
 

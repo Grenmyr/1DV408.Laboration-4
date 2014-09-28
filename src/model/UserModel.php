@@ -1,5 +1,6 @@
 <?php
 require_once("./src/model/SessionModel.php");
+require_once("./src/Exception/RegisterException.php");
 
 class UserModel{
     private $username = "Admin";
@@ -49,6 +50,30 @@ class UserModel{
 
     public function IsAuthenticated($agent){
         return $this->sessionModel->CheckValidSession($agent);
+    }
+
+    /*CODE BELOW THIS BELONG TO REGISTERCONTROLLER AND HANDLES REGISTRATION*/
+    const userNameMinLength = 3;
+    const PasswordMinLength = 6;
+
+
+    public function registerUser($userName){
+
+        if(strlen($userName) < self::userNameMinLength){
+        throw new \src\Exception\RegisterException("Användarnamnet har för få tecken. Minst 3 tecken");
+        }
+        else{
+            $this->username = $userName;
+        }
+
+        return true;
+    }
+    public function registerPassword($password){
+        // TODO I NEED TO VALIDATE USER AND PASSWORD AND think what to store in database.
+        if((strlen($password) < self::PasswordMinLength) ) {
+            throw new \src\Exception\RegisterException("Lösenorden har för få tecken.Minst 6 tecken");
+        }
+        $this->password =$password;
     }
 }
 /**
