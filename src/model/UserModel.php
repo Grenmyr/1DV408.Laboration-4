@@ -1,18 +1,25 @@
 <?php
 require_once("./src/model/SessionModel.php");
 require_once("./src/Exception/RegisterException.php");
+require_once("./src/Exception/RegexException.php");
 
 class UserModel{
-    private $username = "Admin";
-    private $password = "Password";
+    //fuckar upp vanlig just nu
+    private $username;
+    private $password;
+
     // If multiple users this unique is random and stored in databasse.
     private $unique = "userCredentialsForCookieString";
 
     private $sessionModel;
 
     public function __construct() {
+        if(session_status() !== PHP_SESSION_ACTIVE){
         $this->sessionModel = new SessionModel();
+        }
+        $this->unique = uniqid();
     }
+
 
 
     /**
@@ -33,6 +40,12 @@ class UserModel{
     // Return a string that represent correct password and username.
     public function GetUnique(){
         return $this->unique;
+    }
+    public function GetUser(){
+        return $this->username;
+    }
+    public function GetPassword(){
+        return $this->password;
     }
 
     public function logIn( $username, $password,$agent){
@@ -56,8 +69,28 @@ class UserModel{
     const userNameMinLength = 3;
     const PasswordMinLength = 6;
 
+    public function isValid(){
+        return ($this->password !== null && $this->username !== null);
+    }
+
+    public function sanitizeName($userName){
+        //http://stackoverflow.com/questions/3022185/regular-expression-sanitize-php
+       if(!preg_match('/[^a-z0-9\-]+/i', "$userName" )){
+           return true;
+       }
+       else{
+           $userName = preg_replace('/[^a-z0-9]+/i', '', $userName);
+           //return (trim($userName, '-'));
+           throw new \src\Exception\RegexException($userName);
+       }
+    }
+
+    public function checkValidName($userName){
+        return(preg_match('/[^a-z0-9\-]+/i', "$userName" ));
+    }
 
     public function registerUser($userName){
+        $this->sanitizeName($userName);
 
         if(strlen($userName) < self::userNameMinLength){
         throw new \src\Exception\RegisterException("Användarnamnet har för få tecken. Minst 3 tecken");
@@ -65,15 +98,14 @@ class UserModel{
         else{
             $this->username = $userName;
         }
-
-        return true;
     }
     public function registerPassword($password){
         // TODO I NEED TO VALIDATE USER AND PASSWORD AND think what to store in database.
         if((strlen($password) < self::PasswordMinLength) ) {
             throw new \src\Exception\RegisterException("Lösenorden har för få tecken.Minst 6 tecken");
         }
-        $this->password =$password;
+
+        $this->password = password_hash($password,PASSWORD_BCRYPT);
     }
 }
 /**

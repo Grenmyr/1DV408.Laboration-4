@@ -11,6 +11,7 @@ class RegisterView {
      */
     private $userModel;
     private $message =[];
+    private $userName;
     public function __construct($URLView,$userModel){
         $this->urlView = $URLView;
         $this->userModel = $userModel;
@@ -25,6 +26,9 @@ class RegisterView {
             }
             catch(\src\Exception\RegisterException $e){
                 $this->message[] = $e->getMessage();
+            } catch(\src\Exception\RegexException $e){
+               $this->message[] = "Användarnamnet innehåller ogiltiga tecken";
+               $this->userName = $e->getMessage();
             }
 
             if($this->GetPassword1()=== $this->GetPassword2()){
@@ -39,12 +43,12 @@ class RegisterView {
                 $this->message[] = " Lösenorden matchar inte";
             }
         }
+        return $this->userModel;
     }
 
     public function GetUsername(){
         if(isset($_POST["username"])){
             return($_POST["username"]);
-
         }
         return false;
     }
@@ -57,7 +61,6 @@ class RegisterView {
     Public function GetPassword2(){
         if(isset($_POST["password2"])){
             return($_POST["password2"]);
-
         }
         return false;
     }
@@ -71,8 +74,14 @@ class RegisterView {
         }
         return $dom;
     }
+    public function userExists(){
+        $this->message[] = "Användarnamnet är redan upptaget.";
+    }
     public function show(){
-        $username = $this->GetUsername();
+        if (!$this->userName) {
+            $this->userName = $this->GetUsername();
+        }
+        //$username = $this->GetUsername();
         $password1 = $this->GetPassword1();
         $password2 = $this->GetPassword2();
         $message = $this->renderMessages();
@@ -90,7 +99,7 @@ class RegisterView {
         <label>
         Namn:
         </label>
-        <input type='text' size='25' name='username' value='$username'>
+        <input type='text' size='25' name='username' value='$this->userName'>
         <label> Lösenord </label>
         <input type='password' size='25' name='password1' value='$password1'>
         <label> Repetera Lösenord</label>

@@ -1,10 +1,10 @@
 <?php
 abstract class Repository {
-    protected $dbUsername = 'appUser';
-    protected $dbPassword = '1br@Lösen=rd?';
-    protected $dbConnstring = 'mysql:host=127.0.0.1;dbname=portfoliodb';
+    protected $dbUsername = 'root';
+    protected $dbPassword = '';
+    protected $dbConnstring = 'mysql:host=127.0.0.1;dbname=logindb';
     protected $dbConnection;
-    protected $dbTable;
+    protected $dbTable ='user';
     protected function connection() {
         if ($this->dbConnection == NULL)
             $this->dbConnection = new \PDO($this->dbConnstring, $this->dbUsername, $this->dbPassword);
