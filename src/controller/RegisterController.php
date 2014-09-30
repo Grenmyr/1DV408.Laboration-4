@@ -24,12 +24,12 @@ class RegisterController {
         new UserRepository();
     }
     public function render(){
-        $user = $this->registerView->userSubmit();
+        $user = $this->registerView->IfUserSubmit();
         $userRepository =new UserRepository();
         if ($user->isValid()) {
             try{
                 $userRepository->add($user);
-                //TODO 4:10 Redirect to logincontroller and sett msg in session.
+                return null;
             } catch(Exception $e) {
                 $this->registerView->userExists();
             }

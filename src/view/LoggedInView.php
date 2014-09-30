@@ -6,6 +6,7 @@ class LoggedInView {
      * @var URLView
      */
     private $urlView;
+    private $user;
 
     public function __construct($URLView){
         $this->urlView = $URLView;
@@ -22,12 +23,15 @@ class LoggedInView {
     public function cookieLoginMSG(){
         $this->message = "Inloggning lyckades via cookies.";
     }
+    public function presentUser($userName){
+        $this->user = $userName;
+    }
 
     public function show (){
         return '
             <h1>Laborationskod dg222cs</h1>
             <h2>
-                Admin är inloggad.
+                '.$this->user.' är inloggad.
             </h2>
             <P>'. $this->message .'</P>
             <a href="?' . URLView::$logoutPath . '">Logga ut</a>

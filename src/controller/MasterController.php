@@ -10,23 +10,20 @@ class MasterController {
     //private $RegisterController;
     private $urlView;
 
-    // Construct initializing my 2 other controllers. and Inject URLView to them as dependency.
     public function __construct(){
         $this->urlView = new URLView();
-
-        /*var_dump($this->urlView->GetPath());
-            $this->RegisterController = new RegisterController($this->urlView);
-
-        //beroende pa path instanciera rätt kontroller.
-        $this->loginController = new LoginController($this->urlView);
-        */
-
     }
     // Return dom to index.php
     public function render(){
         if($this->urlView->GetPath()=== 'register'){
             $c = new RegisterController($this->urlView);
-            return $c->render();
+            $page = $c->render();
+            if($page === null){
+                $c = new LoginController($this->urlView);
+                $c->registrationMSG();
+                return $c->render();
+            }
+            return $page;
             //return $this->RegisterController->render();
         }
         //return $this->loginController->render();

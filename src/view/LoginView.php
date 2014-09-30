@@ -25,7 +25,7 @@ class LoginView {
         return false;
     }
 
-    public  function successMSG(){
+    public  function logoutMSG(){
         $this->message = "Du har nu loggat ut.";
     }
 
@@ -44,17 +44,22 @@ class LoginView {
     public function failedCookieMSG(){
         $this->message = "Felaktig information i cookie.";
     }
+    public function registrationMSG(){
+        $this->message = "Registrering av ny användare lyckades.";
+    }
 
 
     // Return true if submit.
     public function userSubmit(){
         if  (isset($_POST['submitButton'])){
-
             return true;
         }
         return false;
     }
 
+    /**
+     * @return string
+     */
     public function show (){
         $username = $this->GetUsername();
         $password = $this->GetPassword();
@@ -71,9 +76,9 @@ class LoginView {
                     <label>
                     Användarnamn:
                     </label>
-                    <input type='text' size='25' name='username' value='$username'>
+                    <input type='text' size='20' name='username' value='$username'>
                     <label> Lösenord </label>
-                    <input type='password' size='25' name='password' value='$password'>
+                    <input type='password' size='20' name='password' value='$password'>
                     <label>Håll mig inloggad</label>
                     <input type='checkbox' name='LoginView::Checked' id='AutologinID'/>
                     <input type='submit' value='Logga in' name='submitButton'>

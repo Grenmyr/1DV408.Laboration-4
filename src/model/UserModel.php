@@ -1,78 +1,98 @@
 <?php
+require_once("./src/model/UserRepository.php");
 require_once("./src/model/SessionModel.php");
 require_once("./src/Exception/RegisterException.php");
 require_once("./src/Exception/RegexException.php");
 
+
+
 class UserModel{
-    //fuckar upp vanlig just nu
     private $username;
     private $password;
+    private $userID;
+    private $expire;
 
-    // If multiple users this unique is random and stored in databasse.
-    private $unique = "userCredentialsForCookieString";
+    const userNameMinLength = 3;
+    const PasswordMinLength = 6;
 
+    /**
+     * @var SessionModel
+     */
     private $sessionModel;
 
     public function __construct() {
-        if(session_status() !== PHP_SESSION_ACTIVE){
         $this->sessionModel = new SessionModel();
-        }
-        $this->unique = uniqid();
     }
-
 
 
     /**
-     * @param $cookieString
-     * @param $cookieTime
+     * @param $uniquekey
      * @param $agent
      * @return bool
-     * This function handles cookie log in, and checks for unique string, representing correct username and password saved earlier.
-     * Also check time has not been manipulated in cookie, and agent is if successful login saved into session.
      */
-    public function cookieLogin($cookieString,$cookieTime,$agent){
-        if($this->unique === $cookieString&& $cookieTime > time()){
-            $this->sessionModel->SetValidSession($agent);
-            return true;
+    public function cookieLogin($uniquekey,$agent){
+        $uniqueRepository = new UniqueRepository();
+        $dbUserModel= $uniqueRepository->GetUniqueKey($uniquekey);
+        if ($dbUserModel) {
+            // If time has not expired on uniquekey in db.
+            if($dbUserModel->GetExpire() > time()){
+                $this->sessionModel->SetValidSession($agent);
+                //Set UserID on this dbUserModel by using dbUserModel own Getter.
+                $this->SetUserID($dbUserModel->GetUserID());
+                return true;
+            }
         }
             return false;
     }
-    // Return a string that represent correct password and username.
-    public function GetUnique(){
-        return $this->unique;
-    }
-    public function GetUser(){
-        return $this->username;
-    }
-    public function GetPassword(){
-        return $this->password;
+
+    /**
+     * @param $userID
+     * @return null
+     */
+    public function getUsernameByUserID($userID){
+        $userRepository = new UserRepository();
+        $username = $userRepository->getUsernameByUserID($userID);
+        return $username;
     }
 
     public function logIn( $username, $password,$agent){
-        //var_dump($this->username == $username && $this->password == $password);
-        if ($this->username == $username && $this->password == $password) {
+        $userRepository = new UserRepository();
+        $dbUserModel =$userRepository->getUserByUsername($username);
+        //if not dbUserModel is not null and verify match.
+        if ($dbUserModel && $dbUserModel->VerifyPassword($password)) {
             $this->sessionModel->SetValidSession($agent);
+            $this->SetUserID($dbUserModel->GetUserID());
             return true;
         }
         return false;
     }
-    public function LogOut(){
+    public function VerifyPassword($password){
+        return password_verify($password, $this->password);
+    }
 
+    public function registerPassword($password){
+        if((strlen($password) < self::PasswordMinLength) ) {
+            throw new \src\Exception\RegisterException("Lösenorden har för få tecken.Minst 6 tecken");
+        }
+        $this->password = password_hash($password,PASSWORD_BCRYPT);
+    }
+
+    public function LogOut(){
         $this->sessionModel->UnsetSession();
+    }
+    public function createUniqueKey(){
+        $uniqueKey = uniqid();
+        return $uniqueKey;
     }
 
     public function IsAuthenticated($agent){
         return $this->sessionModel->CheckValidSession($agent);
     }
 
-    /*CODE BELOW THIS BELONG TO REGISTERCONTROLLER AND HANDLES REGISTRATION*/
-    const userNameMinLength = 3;
-    const PasswordMinLength = 6;
-
     public function isValid(){
         return ($this->password !== null && $this->username !== null);
     }
-
+    // IF regex match, return true, else sanitize name and throw RegexException.
     public function sanitizeName($userName){
         //http://stackoverflow.com/questions/3022185/regular-expression-sanitize-php
        if(!preg_match('/[^a-z0-9\-]+/i', "$userName" )){
@@ -80,7 +100,6 @@ class UserModel{
        }
        else{
            $userName = preg_replace('/[^a-z0-9]+/i', '', $userName);
-           //return (trim($userName, '-'));
            throw new \src\Exception\RegexException($userName);
        }
     }
@@ -91,7 +110,6 @@ class UserModel{
 
     public function registerUser($userName){
         $this->sanitizeName($userName);
-
         if(strlen($userName) < self::userNameMinLength){
         throw new \src\Exception\RegisterException("Användarnamnet har för få tecken. Minst 3 tecken");
         }
@@ -99,13 +117,31 @@ class UserModel{
             $this->username = $userName;
         }
     }
-    public function registerPassword($password){
-        // TODO I NEED TO VALIDATE USER AND PASSWORD AND think what to store in database.
-        if((strlen($password) < self::PasswordMinLength) ) {
-            throw new \src\Exception\RegisterException("Lösenorden har för få tecken.Minst 6 tecken");
-        }
 
-        $this->password = password_hash($password,PASSWORD_BCRYPT);
+    public function SetHash($hash){
+        $this->password = $hash;
+    }
+    public function SetUserID($userID){
+        $this->userID = $userID;
+    }
+    public function SetExpire($expire){
+        $this->expire = $expire;
+    }
+    public function SetUsername($username){
+        $this->username = $username;
+    }
+
+    public function GetUsername(){
+        return $this->username;
+    }
+    public function GetPassword(){
+        return $this->password;
+    }
+    public function GetUserID(){
+        return $this->userID;
+    }
+    public function GetExpire(){
+        return $this->expire;
     }
 }
 /**

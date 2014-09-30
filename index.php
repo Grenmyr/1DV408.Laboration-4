@@ -4,9 +4,15 @@ require_once("src/controller/MasterController.php");
 
 $htmlView = new HTMLView();
 $mc = new MasterController();
-
+try{
 $loginContent = $mc->render();
 $htmlView->echoHTML($loginContent);
+}
+catch (Exception $e){
+    $unexpected = ("Ett oväntat fel har inträffat.");
+    $htmlView->echoHTML($unexpected);
+}
+
 
 
 

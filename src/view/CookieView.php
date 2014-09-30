@@ -4,10 +4,9 @@ class CookieView {
     private $cookieTime;
 
     public function save($unique) {
-        $this->cookieTime = time()+120;
-        //If mutiple users store this data in database.
-        file_put_contents("cookietime.txt",$this->cookieTime);
+        $this->cookieTime = time()+30;
         setcookie( $this->cookieName, $unique, $this->cookieTime);
+        return $this->cookieTime;
     }
     public function cookieExist() {
         if(isset($_COOKIE[$this->cookieName])){
@@ -19,11 +18,8 @@ class CookieView {
         $ret = $_COOKIE[$this->cookieName];
         return $ret;
     }
-    public function delete(){
+    public function deleteCookie(){
         setcookie( $this->cookieName, NULL, time()-1);
-    }
-    public  function GetExpire(){
-        return file_get_contents("cookietime.txt");
     }
 }
 /**

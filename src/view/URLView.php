@@ -23,5 +23,6 @@ class URLView {
             return $_GET['path'];
         }
         return 'login';
+
     }
 } 

@@ -2,8 +2,19 @@
 class SessionModel {
    // Set a new session.
    public function __construct(){
-       session_start();
+       if(session_status() !== PHP_SESSION_ACTIVE){
+            session_start();
+       }
    }
+    public function SetUser($username){
+        $_SESSION["userName"]=$username;
+    }
+    public function GetUser(){
+        if(isset($_SESSION["userName"])){
+                return $_SESSION['userName'];
+        }
+        return false;
+    }
 
     /*
      * This check if a valid Session, and a valid agent which it compare to stored agent in session.

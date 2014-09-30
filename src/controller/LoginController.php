@@ -4,6 +4,8 @@ require_once("./src/view/LoginView.php");
 require_once("./src/view/SweDateView.php");
 
 require_once("./src/model/UserModel.php");
+require_once("./src/model/UniqueRepository.php");
+require_once("./src/model/SessionModel.php");
 
 require_once("./src/view/CookieView.php");
 require_once("./src/helpers/AgentHelper.php");
@@ -11,7 +13,7 @@ require_once("./src/helpers/AgentHelper.php");
 
 
 class LoginController {
-    /*
+    /**
      * @var LoggedInView
      */
     private $loggedInView;
@@ -35,11 +37,14 @@ class LoginController {
     private $cookieView;
 
     /**
-     * @var AgentHelper;
+     * @var AgentHelper
      */
     private $agentHelper;
 
-
+    /**
+     * @var SessionModel
+     */
+    private $sessionModel;
 
 
     public  function __construct($URLView){
@@ -47,33 +52,38 @@ class LoginController {
         $this->loginView = new LoginView($URLView);
         $this->sweDateView = new SweDateView();
 
+        $this->sessionModel = new SessionModel();
         $this->userModel = new UserModel();
 
         $this->cookieView = new CookieView();
         $this->agentHelper = new AgentHelper();
     }
+
     public function render(){
-        //Get Client agent, and check if cookie exist, if exist try log in with cookie.
+        //Get Client agent,and if session does not exist. Then check if cookie exist, if exist try log in with cookie.
         $agent = $this->agentHelper->GetAgent();
-        if(!$this->userModel->IsAuthenticated($agent)&&$this->cookieView->cookieExist()){
+        if(!$this->userModel->IsAuthenticated($agent) && $this->cookieView->cookieExist()){
             $cookieString = $this->cookieView->load();
-            $cookieTime = $this->cookieView->GetExpire();
-            // check userModel if cookie is valid.
-            if($this->userModel->cookieLogin($cookieString,$cookieTime,$agent)){
+            // check userModel if cookie is a valid cookie, if valid cookie set session with user agent.
+            if($this->userModel->cookieLogin($cookieString,$agent)){
+                $userID =$this->userModel->GetUserID();
+                $userName = $this->userModel->getUsernameByUserID($userID);
+                $this->sessionModel->SetUser($userName);
                 $this->loggedInView->cookieLoginMSG();
             }
             else{
                 $this->loginView->failedCookieMSG();
-                $this->cookieView->delete();
+                $this->cookieView->deleteCookie();
             }
         }
 
         // If authenticated user, check if user pressed Logout. Then logout and present log out message.
         if($this->userModel->IsAuthenticated($agent)){
+            $this->loggedInView->presentUser($this->sessionModel->GetUser());
             if($this->loggedInView->userLoggedOut()){
                 $this->userModel->LogOut();
-                $this->cookieView->delete();
-                $this->loginView->successMSG();
+                $this->cookieView->deleteCookie();
+                $this->loginView->logoutMSG();
             }
         }
         else{
@@ -83,15 +93,19 @@ class LoginController {
                 $password = $this->loginView->GetPassword();
                 $username = $this->loginView->GetUsername();
                 $trueAgent = $this->agentHelper->GetAgent();
+
+                // Check userModel if user can log in.
                 if ($this->userModel->LogIn($username, $password,$trueAgent)) {
-
-
+                    $this->sessionModel->SetUser($username);
                     $this->loggedInView->successMSG();
+                    $this->loggedInView->presentUser($username);
+
                     // Create cookie if user clicked select box in login view.
                         if($this->loginView->wantCookie()){
-                            // Get uniqueString from UserModel that is stored in cookie.
-                            $uniqueString = $this->userModel->GetUnique();
-                            $this->cookieView->save($uniqueString);
+                            $uniqueString = $this->userModel->createUniqueKey();
+                            $cookieTime = $this->cookieView->save($uniqueString);
+                            $uniqueRepository = new UniqueRepository();
+                            $uniqueRepository->add($uniqueString,$cookieTime,$this->userModel);
                             $this->loggedInView->cookieSuccessMSG();
                         }
                     }
@@ -110,6 +124,9 @@ class LoginController {
         else{
             return $this->loginView->show()  . $this->sweDateView->show();
         }
+    }
+    public function registrationMSG(){
+        $this->loginView->registrationMSG();
     }
 }
 

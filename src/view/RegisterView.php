@@ -17,9 +17,8 @@ class RegisterView {
         $this->userModel = $userModel;
     }
 
-
     // Return true if user press register button.
-    public function userSubmit(){
+    public function IfUserSubmit(){
         if  (isset($_POST['registerButton'])){
             try{
             $this->userModel->registerUser($this->GetUsername());
@@ -44,6 +43,10 @@ class RegisterView {
             }
         }
         return $this->userModel;
+    }
+
+    public function userExists(){
+        $this->message[] = "Användarnamnet är redan upptaget.";
     }
 
     public function GetUsername(){
@@ -74,14 +77,11 @@ class RegisterView {
         }
         return $dom;
     }
-    public function userExists(){
-        $this->message[] = "Användarnamnet är redan upptaget.";
-    }
+
     public function show(){
         if (!$this->userName) {
             $this->userName = $this->GetUsername();
         }
-        //$username = $this->GetUsername();
         $password1 = $this->GetPassword1();
         $password2 = $this->GetPassword2();
         $message = $this->renderMessages();
@@ -99,11 +99,11 @@ class RegisterView {
         <label>
         Namn:
         </label>
-        <input type='text' size='25' name='username' value='$this->userName'>
+        <input type='text' size='20' name='username' value='$this->userName'>
         <label> Lösenord </label>
-        <input type='password' size='25' name='password1' value='$password1'>
+        <input type='password' size='20' name='password1' value='$password1'>
         <label> Repetera Lösenord</label>
-        <input type='password' size='25' name='password2' value='$password2'>
+        <input type='password' size='20' name='password2' value='$password2'>
         <input type='submit' value='Registrera' name='registerButton'>
     </fieldset>
 </form>
