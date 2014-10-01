@@ -9,8 +9,8 @@ $loginContent = $mc->render();
 $htmlView->echoHTML($loginContent);
 }
 catch (Exception $e){
-    $unexpected = ("Ett oväntat fel har inträffat.");
-    $htmlView->echoHTML($unexpected);
+    header('Location: /error.html');
+    die();
 }
 
 
