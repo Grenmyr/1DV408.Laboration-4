@@ -8,7 +8,7 @@ require_once("./src/model/UniqueRepository.php");
 require_once("./src/model/SessionModel.php");
 
 require_once("./src/view/CookieView.php");
-require_once("./src/helpers/AgentHelper.php");
+require_once("./src/Helpers/AgentHelper.php");
 
 
 

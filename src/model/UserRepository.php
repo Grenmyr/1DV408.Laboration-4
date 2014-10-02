@@ -6,7 +6,6 @@ class UserRepository extends Repository {
     private static $password="password";
     private static $userID="userID";
     private static $dbTable ='user';
-    //private static $uniqueKey = "uniquekey";
 
     public function add(UserModel $user) {
         // If Empty user submit throw exception.

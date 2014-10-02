@@ -9,7 +9,7 @@ class HTMLView {
         <html>
         <head>
             <meta charset='UTF-8' />
-            <title>Laboration 2</title>
+            <title>Laboration 4</title>
         </head>
         <body>
         <div class='content'>

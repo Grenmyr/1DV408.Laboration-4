@@ -12,11 +12,6 @@ catch (Exception $e){
     header('Location: /error.html');
     die();
 }
-
-
-
-
-
 /**
  * Created by PhpStorm.
  * User: dav

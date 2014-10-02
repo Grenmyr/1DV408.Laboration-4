@@ -6,6 +6,7 @@ require_once("./src/model/UserRepository.php");
 require_once("./src/model/UserModel.php");
 
 require_once("./src/Exception/RegisterException.php");
+require_once("./src/view/SweDateView.php");
 class RegisterController {
 
     /**
@@ -16,11 +17,15 @@ class RegisterController {
      * @var UserModel
      */
     private $userModel;
+    /**
+     * @var SweDateView
+     */
+    private $sweDateView;
 
     public function __construct($URLView){
         $this->userModel = new UserModel();
         $this->registerView = new RegisterView($URLView, $this->userModel);
-
+        $this->sweDateView = new SweDateView();
         new UserRepository();
     }
     public function render(){
@@ -34,7 +39,7 @@ class RegisterController {
                 $this->registerView->userExists();
             }
         }
-        return $this->registerView->show();
+        return $this->registerView->show() . $this->sweDateView->show();
     }
 }
 /**
