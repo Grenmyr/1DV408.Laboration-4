@@ -6,8 +6,9 @@ require_once("./src/view/URLView.php");
 
 
 class MasterController {
-    //private $loginController;
-    //private $RegisterController;
+    /**
+     * @var URLView
+     */
     private $urlView;
 
     public function __construct(){
@@ -16,19 +17,17 @@ class MasterController {
     // Return dom to index.php
     public function render(){
         if($this->urlView->GetPath()=== 'register'){
-            $c = new RegisterController($this->urlView);
-            $page = $c->render();
+            $controller = new RegisterController($this->urlView);
+            $page = $controller->render();
             if($page === null){
-                $c = new LoginController($this->urlView);
-                $c->registrationMSG();
-                return $c->render();
+                $controller = new LoginController($this->urlView);
+                $controller->registrationMSG();
+                return $controller->render();
             }
             return $page;
-            //return $this->RegisterController->render();
         }
-        //return $this->loginController->render();
-        $c = new LoginController($this->urlView);
-        return $c->render();
+        $controller = new LoginController($this->urlView);
+        return $controller->render();
     }
 }
 /**

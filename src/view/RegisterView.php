@@ -49,6 +49,16 @@ class RegisterView {
         $this->message[] = "Användarnamnet är redan upptaget.";
     }
 
+    public function renderMessages(){
+        $dom = '';
+        if(is_array($this->message )){
+        foreach ($this->message as $messages){
+            $dom .= "<p>$messages</p>";
+        }
+        }
+        return $dom;
+    }
+
     public function GetUsername(){
         if(isset($_POST["username"])){
             return($_POST["username"]);
@@ -66,16 +76,6 @@ class RegisterView {
             return($_POST["password2"]);
         }
         return false;
-    }
-
-    public function renderMessages(){
-        $dom = '';
-        if(is_array($this->message )){
-        foreach ($this->message as $messages){
-            $dom .= "<p>$messages</p>";
-        }
-        }
-        return $dom;
     }
 
     public function show(){

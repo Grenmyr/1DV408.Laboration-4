@@ -81,7 +81,7 @@ class LoginController {
         if($this->userModel->IsAuthenticated($agent)){
             $this->loggedInView->presentUser($this->sessionModel->GetUser());
             if($this->loggedInView->userLoggedOut()){
-                $this->userModel->LogOut();
+                $this->userModel->logOut();
                 $this->cookieView->deleteCookie();
                 $this->loginView->logoutMSG();
             }

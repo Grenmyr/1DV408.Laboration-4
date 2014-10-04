@@ -13,10 +13,12 @@
       <w>lyckades</w>
       <w>lösenord</w>
       <w>multipart</w>
+      <w>passwordminlength</w>
       <w>registrera</w>
       <w>registrerar</w>
       <w>skriv</w>
       <w>uniquekey</w>
+      <w>usernameminlength</w>
     </words>
   </dictionary>
 </component>

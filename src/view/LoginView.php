@@ -10,12 +10,14 @@ class LoginView {
     public  function __construct($urlView){
         $this->urlView = $urlView;
     }
-    public function GetUsername(){
-        return (isset($_POST["username"])) ? $_POST["username"] : '';
-    }
 
-    Public function GetPassword(){
-        return (isset($_POST["password"])) ? $_POST["password"] : '';
+
+    // Return true if submit.
+    public function userSubmit(){
+        if  (isset($_POST['submitButton'])){
+            return true;
+        }
+        return false;
     }
 
     Public function wantCookie() {
@@ -48,13 +50,12 @@ class LoginView {
         $this->message = "Registrering av ny användare lyckades.";
     }
 
+    public function GetUsername(){
+        return (isset($_POST["username"])) ? $_POST["username"] : '';
+    }
 
-    // Return true if submit.
-    public function userSubmit(){
-        if  (isset($_POST['submitButton'])){
-            return true;
-        }
-        return false;
+    Public function GetPassword(){
+        return (isset($_POST["password"])) ? $_POST["password"] : '';
     }
 
     /**
